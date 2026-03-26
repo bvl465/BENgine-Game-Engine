@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3167A812-5D2C-4EE9-ACFD-F0E959384755}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>spinnycube</RootNamespace>
+    <ProjectName>GameEngine</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)extern\glfw-2.7.6\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)_Debug</TargetName>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)extern\glfw-2.7.6\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(ProjectName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";MEMORY_LOGS_DIR=R"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)dist\Math\include;$(SolutionDir)dist\SB6\include;$(SolutionDir)dist\GLFW\include;$(SolutionDir)dist\File\include;$(SolutionDir)dist\AzulCore\include</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <SDLCheck>
+      </SDLCheck>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <ForcedIncludeFiles>"$(SolutionDir)/src/BENgine/MemTracker/Framework.h"</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD.lib</IgnoreSpecificDefaultLibraries>
+      <ShowProgress>NotSet</ShowProgress>
+      <LinkStatus>
+      </LinkStatus>
+      <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+      <AdditionalDependencies>xmllite.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\User Code\AnimatedSpriteDemo.cpp" />
+    <ClCompile Include="..\User Code\Axis.cpp" />
+    <ClCompile Include="..\User Code\Bullet.cpp" />
+    <ClCompile Include="..\User Code\BulletPool.cpp" />
+    <ClCompile Include="..\User Code\Cockpit.cpp" />
+    <ClCompile Include="..\User Code\Enemy.cpp" />
+    <ClCompile Include="..\User Code\FirstPersonFlightCam.cpp" />
+    <ClCompile Include="..\User Code\FlightScene.cpp" />
+    <ClCompile Include="..\User Code\Frigate.cpp" />
+    <ClCompile Include="..\User Code\SceneDemo.cpp" />
+    <ClCompile Include="..\User Code\SceneTest.cpp" />
+    <ClCompile Include="..\User Code\SpriteCollectionDemo.cpp" />
+    <ClCompile Include="..\User Code\StitchSprite.cpp" />
+    <ClCompile Include="..\User Code\WorldPlane.cpp" />
+    <ClCompile Include="BENgine Resources\LoadResources.cpp" />
+    <ClCompile Include="BENgine Start End\BENgineEnd.cpp" />
+    <ClCompile Include="BENgine Start End\BENgineInitialize.cpp" />
+    <ClCompile Include="BENgine\Asset Managers\Image Manager\ImageManager.cpp" />
+    <ClCompile Include="BENgine\Asset Managers\Model Manager\ModelManager.cpp" />
+    <ClCompile Include="BENgine\Asset Managers\Shader Manager\ShaderManager.cpp" />
+    <ClCompile Include="BENgine\Asset Managers\Terrain Object Manager\TerrainObjectManager.cpp" />
+    <ClCompile Include="BENgine\Asset Managers\Texture Manager\TextureManager.cpp" />
+    <ClCompile Include="BENgine\BENgine.cpp" />
+    <ClCompile Include="BENgine\Camera\CameraManager.cpp" />
+    <ClCompile Include="BENgine\Camera\FreeCamera.cpp" />
+    <ClCompile Include="BENgine\Collision\CollisionVolumeAABB.cpp" />
+    <ClCompile Include="BENgine\Collision\CollisionVolumeBSphere.cpp" />
+    <ClCompile Include="BENgine\Collision\CollisionVolumeOBB.cpp" />
+    <ClCompile Include="BENgine\Game Object\Alarmable\Alarmable.cpp" />
+    <ClCompile Include="BENgine\Game Object\Alarmable\AlarmDeregistrationCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Alarmable\AlarmableManager.cpp" />
+    <ClCompile Include="BENgine\Game Object\Alarmable\AlarmRegistrationCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Collidable\Collidable.cpp" />
+    <ClCompile Include="BENgine\Game Object\Collidable\CollidableGroup.cpp" />
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionDeregistrationCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionManager.cpp" />
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionRegistrationCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionTestPairCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionTestSelfCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionTestTerrainCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Drawable\Drawable.cpp" />
+    <ClCompile Include="BENgine\Game Object\Drawable\DrawableManager.cpp" />
+    <ClCompile Include="BENgine\Game Object\Drawable\DrawDeregistrationCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Drawable\DrawRegistrationCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\GameObject.cpp" />
+    <ClCompile Include="BENgine\Game Object\Inputable\Inputable.cpp" />
+    <ClCompile Include="BENgine\Game Object\Inputable\InputDeregistrationCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Inputable\InputRegistrationCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Inputable\KeyboardEventManager.cpp" />
+    <ClCompile Include="BENgine\Game Object\Inputable\SingleKeyEventManager.cpp" />
+    <ClCompile Include="BENgine\Game Object\Life Cycle\GameObjectEntryCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Life Cycle\GameObjectExitCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Updatable\Updatable.cpp" />
+    <ClCompile Include="BENgine\Game Object\Updatable\UpdatableManager.cpp" />
+    <ClCompile Include="BENgine\Game Object\Updatable\UpdateDeregistrationCommand.cpp" />
+    <ClCompile Include="BENgine\Game Object\Updatable\UpdateRegistrationCommand.cpp" />
+    <ClCompile Include="BENgine\main.cpp" />
+    <ClCompile Include="BENgine\Math Tools\BENgineMathTools.cpp" />
+    <ClCompile Include="BENgine\Scene\Scene.cpp" />
+    <ClCompile Include="BENgine\Scene\SceneChangeStrategy.cpp" />
+    <ClCompile Include="BENgine\Scene\SceneManager.cpp" />
+    <ClCompile Include="BENgine\Scene\SceneNull.cpp" />
+    <ClCompile Include="BENgine\Scene\SceneNullStrategy.cpp" />
+    <ClCompile Include="BENgine\Scene\SceneRegistrationBroker.cpp" />
+    <ClCompile Include="BENgine\Sprite\BENgineAnimatedSprite.cpp" />
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteComponent.cpp" />
+    <ClCompile Include="BENgine\Sprite\BENgineSprite.cpp" />
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteAnimation.cpp" />
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteAnimationCommandBase.cpp" />
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteAnimationCommandLoop.cpp" />
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteAnimationTimer.cpp" />
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteBase.cpp" />
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteCollection.cpp" />
+    <ClCompile Include="BENgine\Sprite\Layers\Sprite2DLayer.cpp" />
+    <ClCompile Include="BENgine\Sprite\Layers\Sprite2DLayerGroup.cpp" />
+    <ClCompile Include="BENgine\Sprite\Layers\Sprite2DLayerManager.cpp" />
+    <ClCompile Include="BENgine\Sprite\SpriteFont.cpp" />
+    <ClCompile Include="BENgine\Sprite\SpriteFontManager.cpp" />
+    <ClCompile Include="BENgine\Sprite\SpriteString.cpp" />
+    <ClCompile Include="BENgine\Terrain\TerrainManagerStrategyInitialized.cpp" />
+    <ClCompile Include="BENgine\Terrain\TerrainManagerStrategyNull.cpp" />
+    <ClCompile Include="BENgine\Terrain\TerrainObject.cpp" />
+    <ClCompile Include="BENgine\Terrain\TerrainManager.cpp" />
+    <ClCompile Include="BENgine\Terrain\TerrainRectangleArea.cpp" />
+    <ClCompile Include="BENgine\Terrain\TRAIterator.cpp" />
+    <ClCompile Include="BENgine\Time\FreezeTime.cpp" />
+    <ClCompile Include="BENgine\Time\TimeManager.cpp" />
+    <ClCompile Include="BENgine\Visualizer\CollisionVisualizerAABBCommand.cpp" />
+    <ClCompile Include="BENgine\Visualizer\CollisionVisualizerBSphereCommand.cpp" />
+    <ClCompile Include="BENgine\Visualizer\CollisionVisualizerOBBCommand.cpp" />
+    <ClCompile Include="BENgine\Visualizer\Visualizer.cpp" />
+    <ClCompile Include="BENgine\Visualizer\VisualizerCommandPool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dist\AzulCore\include\AzulCore.h" />
+    <ClInclude Include="..\dist\AzulCore\include\AzulFileHdr.h" />
+    <ClInclude Include="..\dist\AzulCore\include\AzulHelper.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Camera.h" />
+    <ClInclude Include="..\dist\AzulCore\include\DebugOut.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Engine.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GpuVertTypes.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorByPosition.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTexture.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTextureLight.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_Sprite.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_SpriteBox.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureFlat.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureLight.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeAutoColor.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeConstantColor.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Image.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Keyboard.h" />
+    <ClInclude Include="..\dist\AzulCore\include\LibrarySetup.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Model.h" />
+    <ClInclude Include="..\dist\AzulCore\include\ModelTools.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Mouse.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Rect.h" />
+    <ClInclude Include="..\dist\AzulCore\include\ShaderObject.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Texture.h" />
+    <ClInclude Include="..\dist\AzulCore\include\TextureTGA.h" />
+    <ClInclude Include="..\dist\File\include\File.h" />
+    <ClInclude Include="..\dist\GLFW\include\GL\glfw.h" />
+    <ClInclude Include="..\dist\Math\include\Align16.h" />
+    <ClInclude Include="..\dist\Math\include\Constants.h" />
+    <ClInclude Include="..\dist\Math\include\Enum.h" />
+    <ClInclude Include="..\dist\Math\include\MathApp.h" />
+    <ClInclude Include="..\dist\Math\include\MathEngine.h" />
+    <ClInclude Include="..\dist\Math\include\Matrix.h" />
+    <ClInclude Include="..\dist\Math\include\Quat.h" />
+    <ClInclude Include="..\dist\Math\include\QuatApp.h" />
+    <ClInclude Include="..\dist\Math\include\Util.h" />
+    <ClInclude Include="..\dist\Math\include\Vect.h" />
+    <ClInclude Include="..\dist\Math\include\VectApp.h" />
+    <ClInclude Include="..\dist\SB6\include\arcball.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\gl3w.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\glcorearb.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\glext.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\glxext.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\wglext.h" />
+    <ClInclude Include="..\dist\SB6\include\object.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6ext.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6ktx.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6mfile.h" />
+    <ClInclude Include="..\dist\SB6\include\shader.h" />
+    <ClInclude Include="..\dist\SB6\include\vmath.h" />
+    <ClInclude Include="..\User Code\AnimatedSpriteDemo.h" />
+    <ClInclude Include="..\User Code\Axis.h" />
+    <ClInclude Include="..\User Code\Bullet.h" />
+    <ClInclude Include="..\User Code\BulletPool.h" />
+    <ClInclude Include="..\User Code\Cockpit.h" />
+    <ClInclude Include="..\User Code\Enemy.h" />
+    <ClInclude Include="..\User Code\FirstPersonFlightCam.h" />
+    <ClInclude Include="..\User Code\FlightScene.h" />
+    <ClInclude Include="..\User Code\Frigate.h" />
+    <ClInclude Include="..\User Code\SceneDemo.h" />
+    <ClInclude Include="..\User Code\SceneTest.h" />
+    <ClInclude Include="..\User Code\SpriteCollectionDemo.h" />
+    <ClInclude Include="..\User Code\StitchSprite.h" />
+    <ClInclude Include="..\User Code\WorldPlane.h" />
+    <ClInclude Include="BENgine\Asset Managers\Image Manager\ImageManager.h" />
+    <ClInclude Include="BENgine\Asset Managers\Image Manager\ImageManagerAttorney.h" />
+    <ClInclude Include="BENgine\Asset Managers\Model Manager\ModelManager.h" />
+    <ClInclude Include="BENgine\Asset Managers\Model Manager\ModelManagerAttorney.h" />
+    <ClInclude Include="BENgine\Asset Managers\Shader Manager\ShaderManager.h" />
+    <ClInclude Include="BENgine\Asset Managers\Shader Manager\ShaderManagerAttorney.h" />
+    <ClInclude Include="BENgine\Asset Managers\Terrain Object Manager\TerrainObjectManager.h" />
+    <ClInclude Include="BENgine\Asset Managers\Terrain Object Manager\TerrainObjectManagerAttorney.h" />
+    <ClInclude Include="BENgine\Asset Managers\Texture Manager\TextureManager.h" />
+    <ClInclude Include="BENgine\Asset Managers\Texture Manager\TextureManagerAttorney.h" />
+    <ClInclude Include="BENgine\BENgine.h" />
+    <ClInclude Include="BENgine\BENgineAttorney.h" />
+    <ClInclude Include="BENgine\Camera\CameraManager.h" />
+    <ClInclude Include="BENgine\Camera\FreeCamera.h" />
+    <ClInclude Include="BENgine\Collision\CollisionVolume.h" />
+    <ClInclude Include="BENgine\Collision\CollisionVolumeAABB.h" />
+    <ClInclude Include="BENgine\Collision\CollisionVolumeBSphere.h" />
+    <ClInclude Include="BENgine\Collision\CollisionVolumeOBB.h" />
+    <ClInclude Include="BENgine\Game Object\Alarmable\Alarmable.h" />
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmableAttorney.h" />
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmDeregistrationCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmableManager.h" />
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmRegistrationCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmRegistrationCommandAttorney.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\Collidable.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollidableAttorney.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollidableGroup.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionDeregistrationCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionDispatch.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionDispatchBase.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionDispatchTerrain.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionManager.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionRegistrationCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionTestCommandBase.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionTestPairCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionTestSelfCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionTestTerrainCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Drawable\Drawable.h" />
+    <ClInclude Include="BENgine\Game Object\Drawable\DrawableAttorney.h" />
+    <ClInclude Include="BENgine\Game Object\Drawable\DrawableManager.h" />
+    <ClInclude Include="BENgine\Game Object\Drawable\DrawDeregistrationCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Drawable\DrawRegistrationCommand.h" />
+    <ClInclude Include="BENgine\Game Object\GameObject.h" />
+    <ClInclude Include="BENgine\Game Object\Inputable\Inputable.h" />
+    <ClInclude Include="BENgine\Game Object\Inputable\InputableAttorney.h" />
+    <ClInclude Include="BENgine\Game Object\Inputable\InputDeregistrationCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Inputable\InputRegistrationCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Inputable\KeyboardEventManager.h" />
+    <ClInclude Include="BENgine\Game Object\Inputable\KeyEvent.h" />
+    <ClInclude Include="BENgine\Game Object\Inputable\SingleKeyEventManager.h" />
+    <ClInclude Include="BENgine\Game Object\Life Cycle\GameObjectAttorney.h" />
+    <ClInclude Include="BENgine\Game Object\Life Cycle\GameObjectEntryCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Life Cycle\GameObjectExitCommand.h" />
+    <ClInclude Include="BENgine\Game Object\RegistrationState.h" />
+    <ClInclude Include="BENgine\Game Object\Updatable\Updatable.h" />
+    <ClInclude Include="BENgine\Game Object\Updatable\UpdatableAttorney.h" />
+    <ClInclude Include="BENgine\Game Object\Updatable\UpdatableManager.h" />
+    <ClInclude Include="BENgine\Game Object\Updatable\UpdateDeregistrationCommand.h" />
+    <ClInclude Include="BENgine\Game Object\Updatable\UpdateRegistrationCommand.h" />
+    <ClInclude Include="BENgine\Math Tools\BENgineMathTools.h" />
+    <ClInclude Include="BENgine\MemTracker\Framework.h" />
+    <ClInclude Include="BENgine\MemTracker\ProjectSettings.h" />
+    <ClInclude Include="BENgine\Patterns\CommandBase.h" />
+    <ClInclude Include="BENgine\Scene\Scene.h" />
+    <ClInclude Include="BENgine\Scene\SceneAttorney.h" />
+    <ClInclude Include="BENgine\Scene\SceneChangeStrategy.h" />
+    <ClInclude Include="BENgine\Scene\SceneManager.h" />
+    <ClInclude Include="BENgine\Scene\SceneManagerAttorney.h" />
+    <ClInclude Include="BENgine\Scene\SceneManagerStrategyBase.h" />
+    <ClInclude Include="BENgine\Scene\SceneNull.h" />
+    <ClInclude Include="BENgine\Scene\SceneNullStrategy.h" />
+    <ClInclude Include="BENgine\Scene\SceneRegistrationBroker.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineAnimatedSprite.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineAnimatedSpriteAttorney.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSprite.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimation.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationCommandBase.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationCommandBaseAttorney.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationCommandLoop.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationTimer.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationTimerAttorney.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteBase.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteBaseAttorney.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteCollection.h" />
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteComponent.h" />
+    <ClInclude Include="BENgine\Sprite\Layers\Sprite2DLayer.h" />
+    <ClInclude Include="BENgine\Sprite\Layers\Sprite2DLayerAttorney.h" />
+    <ClInclude Include="BENgine\Sprite\Layers\Sprite2DLayerGroup.h" />
+    <ClInclude Include="BENgine\Sprite\Layers\Sprite2DLayerManager.h" />
+    <ClInclude Include="BENgine\Sprite\SpriteFont.h" />
+    <ClInclude Include="BENgine\Sprite\SpriteFontManager.h" />
+    <ClInclude Include="BENgine\Sprite\SpriteFontManagerAttorney.h" />
+    <ClInclude Include="BENgine\Sprite\SpriteString.h" />
+    <ClInclude Include="BENgine\Terrain\TerrainManager.h" />
+    <ClInclude Include="BENgine\Terrain\TerrainManagerAttorney.h" />
+    <ClInclude Include="BENgine\Terrain\TerrainManagerStrategyBase.h" />
+    <ClInclude Include="BENgine\Terrain\TerrainManagerStrategyInitialized.h" />
+    <ClInclude Include="BENgine\Terrain\TerrainManagerStrategyNull.h" />
+    <ClInclude Include="BENgine\Terrain\TerrainObject.h" />
+    <ClInclude Include="BENgine\Terrain\TerrainRectangleArea.h" />
+    <ClInclude Include="BENgine\Terrain\TerrainRectangleAreaAttorney.h" />
+    <ClInclude Include="BENgine\Terrain\TRAIterator.h" />
+    <ClInclude Include="BENgine\Time\FreezeTime.h" />
+    <ClInclude Include="BENgine\Time\TimeManager.h" />
+    <ClInclude Include="BENgine\Time\TimeManagerAttorney.h" />
+    <ClInclude Include="BENgine\Utilities\DefaultColors.h" />
+    <ClInclude Include="BENgine\Visualizer\CollisionVisualizerAABBCommand.h" />
+    <ClInclude Include="BENgine\Visualizer\CollisionVisualizerBSphereCommand.h" />
+    <ClInclude Include="BENgine\Visualizer\VisualizerCommandBase.h" />
+    <ClInclude Include="BENgine\Visualizer\CollisionVisualizerOBBCommand.h" />
+    <ClInclude Include="BENgine\Visualizer\Visualizer.h" />
+    <ClInclude Include="BENgine\Visualizer\VisualizerAttorney.h" />
+    <ClInclude Include="BENgine\Visualizer\VisualizerCommandPool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\dist\AzulCore\lib\AzulCore_Debug.lib" />
+    <Library Include="..\dist\File\lib\File_Debug.lib" />
+    <Library Include="..\dist\GLFW\lib\GLFW_Debug.lib" />
+    <Library Include="..\dist\Math\lib\MathEngine_Debug.lib" />
+    <Library Include="..\dist\SB6\lib\sb6_Debug.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Class Diagrams\AnimatedSprite.cd" />
+    <None Include="Class Diagrams\BENgineSpritesBIG.cd" />
+    <None Include="Class Diagrams\BENgineSpriteBase.cd" />
+    <None Include="Class Diagrams\Collision.cd" />
+    <None Include="Class Diagrams\Layers.cd" />
+    <None Include="Class Diagrams\SpriteCollection.cd" />
+    <None Include="Class Diagrams\SpriteRelated.cd" />
+    <None Include="Class Diagrams\Terrain.cd" />
+    <None Include="Class Diagrams\Updatable diagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

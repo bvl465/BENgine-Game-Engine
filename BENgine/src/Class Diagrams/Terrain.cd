@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TerrainManager">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <AssociationLine Name="curTerrain" Type="TerrainObject" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="4.562" />
+        <Point X="1.812" Y="4.562" />
+        <Point X="1.812" Y="5.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="strategy" Type="TerrainManagerStrategyBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.203" />
+        <Point X="8.188" Y="3.203" />
+        <Point X="8.188" Y="2.565" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EQAAAACAAAAAAIAQAFAAAAEAIAAQAAAAABAgAAAAAIA=</HashCode>
+      <FileName>BENgine\Terrain\TerrainManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="curTerrain" />
+      <Field Name="strategy" />
+      <Field Name="nullStrategy" />
+      <Field Name="initializedStrategy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TerrainObject">
+    <Position X="0.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIQAAABkIICAAAAAIhCE5AAISAEAEAAAABCgAEEAQAA=</HashCode>
+      <FileName>BENgine\Terrain\TerrainObject.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pCells" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TerrainRectangleArea">
+    <Position X="3.5" Y="8" Width="1.5" />
+    <AssociationLine Name="max" Type="CellCoordinates" FixedFromPoint="true">
+      <Path>
+        <Point X="3.812" Y="10.065" />
+        <Point X="3.812" Y="11" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAFAACAAAQAAAAAAAAAAAQAAAAAAAAAAAEABEAAAA=</HashCode>
+      <FileName>BENgine\Terrain\TerrainRectangleArea.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="max" />
+      <Field Name="min" />
+      <Field Name="pTerrainObject" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TerrainRectangleAreaAttorney">
+    <Position X="8.75" Y="7.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="TerrainRectangleAreaAttorney::TRA" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Terrain\TerrainRectangleAreaAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BENgine\Terrain\TerrainRectangleAreaAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TRAIterator">
+    <Position X="7.75" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAhAAAAABAAAAAAQAAAAQAIAAAAAEAAAAAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Terrain\TRAIterator.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="terRectArea" />
+      <Field Name="currentCoords" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TerrainManagerStrategyBase">
+    <Position X="7.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAACAAEAAAAAAAAAAABAgAAAABAA=</HashCode>
+      <FileName>BENgine\Terrain\TerrainManagerStrategyBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainManagerStrategyNull">
+    <Position X="7.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAgAAAAAAAAAAEAAAAAAAAAAABAgAAAAAAg=</HashCode>
+      <FileName>BENgine\Terrain\TerrainManagerStrategyNull.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainManagerStrategyInitialized">
+    <Position X="10" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAgAAABEAAAAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Terrain\TerrainManagerStrategyInitialized.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainObjectManager">
+    <Position X="13.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AggAhAgAAAAAAAAAAAAAAARAAAECAAAAQAAgAAIAAAA=</HashCode>
+      <FileName>BENgine\Asset Managers\Terrain Object Manager\TerrainObjectManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ptrInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TerrainObjectManagerAttorney">
+    <Position X="14.25" Y="7.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BENgine\Asset Managers\Terrain Object Manager\TerrainObjectManagerAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene" Collapsed="true">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQA0gAgCQAAgwCIgAAAAAAAQJIJADgAAAAgwgCAAAQ=</HashCode>
+      <FileName>BENgine\Scene\Scene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="terrainManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Struct Name="Cell">
+    <Position X="3.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAEAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BENgine\Terrain\TerrainObject.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CellCoordinates">
+    <Position X="3" Y="11" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAQAE=</HashCode>
+      <FileName>BENgine\Terrain\TerrainObject.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CellMinMaxVects">
+    <Position X="11" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAEAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BENgine\Terrain\TerrainObject.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

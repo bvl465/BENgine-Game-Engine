@@ -1,0 +1,1042 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="BENgine Start End\BENgineEnd.cpp">
+      <Filter>Application\BENgine\BENgine Start End</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine Start End\BENgineInitialize.cpp">
+      <Filter>Application\BENgine\BENgine Start End</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\BENgine.cpp">
+      <Filter>Application\BENgine</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine Resources\LoadResources.cpp">
+      <Filter>Application\BENgine\BENgine Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\main.cpp">
+      <Filter>Application\BENgine</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Scene\SceneManager.cpp">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Camera\CameraManager.cpp">
+      <Filter>Application\BENgine\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Scene\Scene.cpp">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Scene\SceneRegistrationBroker.cpp">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Asset Managers\Model Manager\ModelManager.cpp">
+      <Filter>Application\BENgine\Asset Managers\Model Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Asset Managers\Shader Manager\ShaderManager.cpp">
+      <Filter>Application\BENgine\Asset Managers\Shader Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Asset Managers\Texture Manager\TextureManager.cpp">
+      <Filter>Application\BENgine\Asset Managers\Texture Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Updatable\Updatable.cpp">
+      <Filter>Application\BENgine\Game Object\Updatable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Updatable\UpdatableManager.cpp">
+      <Filter>Application\BENgine\Game Object\Updatable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Updatable\UpdateDeregistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Updatable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Updatable\UpdateRegistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Updatable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Drawable\Drawable.cpp">
+      <Filter>Application\BENgine\Game Object\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Drawable\DrawableManager.cpp">
+      <Filter>Application\BENgine\Game Object\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Drawable\DrawDeregistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Drawable\DrawRegistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Alarmable\Alarmable.cpp">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Alarmable\AlarmableManager.cpp">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Alarmable\AlarmRegistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Alarmable\AlarmDeregistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Inputable\Inputable.cpp">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Inputable\KeyboardEventManager.cpp">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Inputable\SingleKeyEventManager.cpp">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Inputable\InputDeregistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Inputable\InputRegistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Life Cycle\GameObjectEntryCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Life Cycle</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Life Cycle\GameObjectExitCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Life Cycle</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\GameObject.cpp">
+      <Filter>Application\BENgine\Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Time\TimeManager.cpp">
+      <Filter>Application\BENgine\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Time\FreezeTime.cpp">
+      <Filter>Application\BENgine\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Scene\SceneChangeStrategy.cpp">
+      <Filter>Application\BENgine\Scene\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Scene\SceneNullStrategy.cpp">
+      <Filter>Application\BENgine\Scene\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Collidable\Collidable.cpp">
+      <Filter>Application\BENgine\Game Object\Collidable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionManager.cpp">
+      <Filter>Application\BENgine\Game Object\Collidable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Scene\SceneNull.cpp">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Collidable\CollidableGroup.cpp">
+      <Filter>Application\BENgine\Game Object\Collidable</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionTestPairCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Collidable\Test Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionTestSelfCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Collidable\Test Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionRegistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Collidable\Registration</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionDeregistrationCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Collidable\Registration</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Collision\CollisionVolumeBSphere.cpp">
+      <Filter>Application\BENgine\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Math Tools\BENgineMathTools.cpp">
+      <Filter>Application\BENgine\Math Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Visualizer\Visualizer.cpp">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Visualizer\CollisionVisualizerBSphereCommand.cpp">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Visualizer\VisualizerCommandPool.cpp">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Camera\FreeCamera.cpp">
+      <Filter>Application\BENgine\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\BENgineSprite.cpp">
+      <Filter>Application\BENgine\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Asset Managers\Image Manager\ImageManager.cpp">
+      <Filter>Application\BENgine\Asset Managers\Image Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\Layers\Sprite2DLayer.cpp">
+      <Filter>Application\BENgine\Sprite\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\Layers\Sprite2DLayerManager.cpp">
+      <Filter>Application\BENgine\Sprite\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Collision\CollisionVolumeAABB.cpp">
+      <Filter>Application\BENgine\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Visualizer\CollisionVisualizerAABBCommand.cpp">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteAnimation.cpp">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\BENgineAnimatedSprite.cpp">
+      <Filter>Application\BENgine\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteAnimationTimer.cpp">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Collision\CollisionVolumeOBB.cpp">
+      <Filter>Application\BENgine\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteAnimationCommandLoop.cpp">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteAnimationCommandBase.cpp">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Visualizer\CollisionVisualizerOBBCommand.cpp">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\SpriteFont.cpp">
+      <Filter>Application\BENgine\Sprite\Sprite Font</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\SpriteFontManager.cpp">
+      <Filter>Application\BENgine\Sprite\Sprite Font</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\SpriteString.cpp">
+      <Filter>Application\BENgine\Sprite\Sprite Font</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteBase.cpp">
+      <Filter>Application\BENgine\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteCollection.cpp">
+      <Filter>Application\BENgine\Sprite\Sprite Collection</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Asset Managers\Terrain Object Manager\TerrainObjectManager.cpp">
+      <Filter>Application\BENgine\Asset Managers\Terrain Object Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Terrain\TerrainManager.cpp">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Terrain\TerrainObject.cpp">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\Bullet.cpp">
+      <Filter>Application\Demo\Life cycle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\BulletPool.cpp">
+      <Filter>Application\Demo\Life cycle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\Enemy.cpp">
+      <Filter>Application\Demo\Life cycle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\Cockpit.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\AnimatedSpriteDemo.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\Axis.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\FirstPersonFlightCam.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\Frigate.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\SceneDemo.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\SceneTest.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\SpriteCollectionDemo.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\StitchSprite.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\WorldPlane.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Terrain\TerrainRectangleArea.cpp">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Terrain\TRAIterator.cpp">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Terrain\TerrainManagerStrategyNull.cpp">
+      <Filter>Application\BENgine\Terrain\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Terrain\TerrainManagerStrategyInitialized.cpp">
+      <Filter>Application\BENgine\Terrain\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Game Object\Collidable\CollisionTestTerrainCommand.cpp">
+      <Filter>Application\BENgine\Game Object\Collidable\Test Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\FlightScene.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\Layers\Sprite2DLayerGroup.cpp">
+      <Filter>Application\BENgine\Sprite\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="BENgine\Sprite\BENgineSpriteComponent.cpp">
+      <Filter>Application\BENgine\Sprite</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="_Libs">
+      <UniqueIdentifier>{1392bc0c-ded2-42a7-9ec1-333be4dadedd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{aef3393e-06a5-4f08-bf4a-3b6be12d1e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\GLFW">
+      <UniqueIdentifier>{d22a518f-dd11-48ea-8247-bd82c5928233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\GLFW\include">
+      <UniqueIdentifier>{f1613e77-99f1-482b-bccf-12b6784f3aa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\GLFW\lib">
+      <UniqueIdentifier>{c350b52d-8efa-4eca-a258-d57d45c43245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\SB6">
+      <UniqueIdentifier>{189a2178-2765-49df-b052-8eca24a60d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\SB6\lib">
+      <UniqueIdentifier>{841af908-0674-4949-8aa0-292e3e84a88b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\SB6\include">
+      <UniqueIdentifier>{d2f5d78b-d9cf-4bd9-bd4e-df7522de593c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\File">
+      <UniqueIdentifier>{fb44cdb2-f236-4b3b-833e-e9e2c3af59cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\File\lib">
+      <UniqueIdentifier>{23abe339-ce80-4523-b0f0-23747e3f512f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\File\include">
+      <UniqueIdentifier>{323b20aa-e08c-4260-84b1-1e85121a9e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Math">
+      <UniqueIdentifier>{9fcc2c9b-3e4f-4ab2-a0c5-3099cdf90300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Math\lib">
+      <UniqueIdentifier>{ea7cbe8f-1aeb-4ad2-bd4e-fa300408bd5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Math\include">
+      <UniqueIdentifier>{5d126765-1977-4213-89fb-e004f6468da5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\AzulCore">
+      <UniqueIdentifier>{d3f91089-c7e6-474d-8376-afd372d35a8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\AzulCore\lib">
+      <UniqueIdentifier>{8a854cfc-9294-4797-b476-0b2feacdd62f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\AzulCore\include">
+      <UniqueIdentifier>{60eabb98-a714-4df4-8fa1-3fb92ea55bd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemTracker">
+      <UniqueIdentifier>{2a1e8c10-3adc-469b-9b18-041b6c3cc720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine">
+      <UniqueIdentifier>{d961dcfd-553d-41ec-b4b9-ca7157518c25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Asset Managers">
+      <UniqueIdentifier>{9bed11be-7335-407d-b253-62257b5705f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\BENgine Resources">
+      <UniqueIdentifier>{8505602b-df6c-4320-936b-181f2721921a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\BENgine Start End">
+      <UniqueIdentifier>{6d399de5-6e86-4f94-a9d0-cf1e20b18ccc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Camera">
+      <UniqueIdentifier>{4a0ddb01-7b1f-497e-8d3f-eceefd08f102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object">
+      <UniqueIdentifier>{f11808de-0855-4cd1-b5cd-1fcc42fecd61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Scene">
+      <UniqueIdentifier>{8b7e2f55-5061-4f4e-b78f-0a6a0e70598c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Demo">
+      <UniqueIdentifier>{fb02a730-c3da-45ff-a330-c9ed95cd9d45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Updatable">
+      <UniqueIdentifier>{51472900-3fa0-4ed3-9f4d-afce7e903ea3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Drawable">
+      <UniqueIdentifier>{201c8981-4627-4537-8b72-303f2a19b5d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Patterns">
+      <UniqueIdentifier>{314a397d-5318-4b71-8fe1-cae455774ddd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Common">
+      <UniqueIdentifier>{dacebf3e-0497-4673-af64-364175c5df94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Asset Managers\Model Manager">
+      <UniqueIdentifier>{fa1cc8fa-c5a3-4638-9abe-64640a06de3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Asset Managers\Shader Manager">
+      <UniqueIdentifier>{36b7af39-a213-481c-a5f5-2b5edf5adef3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Asset Managers\Texture Manager">
+      <UniqueIdentifier>{3e24aee4-5bc8-4a7a-98bc-000424a4ad31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Alarmable">
+      <UniqueIdentifier>{84ea4bc4-f388-4209-8826-0b8e61db4b71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Inputable">
+      <UniqueIdentifier>{2a16960a-9467-417c-a702-0bbe866f3037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Life Cycle">
+      <UniqueIdentifier>{18cd2e4a-d5d5-42a7-8dcb-62e21a2a0e72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Time">
+      <UniqueIdentifier>{34ce126e-0990-4dbd-ab33-84065f6c84cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Scene\Strategies">
+      <UniqueIdentifier>{453e0099-27f3-4a24-8fc0-3520941c2809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Collidable">
+      <UniqueIdentifier>{e789a21e-9d8c-44c7-bfa4-98db37e53297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Collidable\Test Commands">
+      <UniqueIdentifier>{76799e56-c354-4291-a144-293bb0b14a4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Collidable\Dispatch">
+      <UniqueIdentifier>{7eb46de3-6534-4925-be2b-81fc1f829c89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Game Object\Collidable\Registration">
+      <UniqueIdentifier>{7554ff1a-82ad-4baa-9595-02cf3c462957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Collision">
+      <UniqueIdentifier>{5546ed8a-6f08-40c3-bbd9-e9419a19c8ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Math Tools">
+      <UniqueIdentifier>{788d8f84-7848-4ccc-9477-d1dc0e8ae3ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Visualizer">
+      <UniqueIdentifier>{bead0a4c-bc86-493e-b329-d8a8f614b04f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Sprite">
+      <UniqueIdentifier>{4173b4ed-2e52-46d1-8984-c99008b5814d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Asset Managers\Image Manager">
+      <UniqueIdentifier>{e281d220-bc16-4038-afe2-3a63b3393903}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Utilities">
+      <UniqueIdentifier>{7b98a255-9660-4de7-a149-ee7659a316f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Demo\Life cycle">
+      <UniqueIdentifier>{ef528670-0337-44e3-b9ac-6a69700dd89d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Sprite\Layers">
+      <UniqueIdentifier>{90c94686-c91b-4076-8f27-728947e09ff4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Sprite\Animation">
+      <UniqueIdentifier>{667d66a9-fae4-4274-948f-ad8bc359ff4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Sprite\Sprite Font">
+      <UniqueIdentifier>{674e215e-92b1-4b29-8f05-d677db5aba26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Sprite\Sprite Collection">
+      <UniqueIdentifier>{1683cc83-6c9b-4a93-aab5-12e995e0b456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Terrain">
+      <UniqueIdentifier>{cb2286e1-d9ec-4fa3-b76c-21973115a0e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Asset Managers\Terrain Object Manager">
+      <UniqueIdentifier>{9488a094-f791-4566-a1c9-e43cf046bb1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\BENgine\Terrain\Strategies">
+      <UniqueIdentifier>{52bc3a03-fe21-4d26-aeb8-1ba10e4cf342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class Diagrams">
+      <UniqueIdentifier>{aeec0cc2-b86c-45a3-9011-b334a1e3a8b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dist\GLFW\include\GL\glfw.h">
+      <Filter>_Libs\GLFW\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\arcball.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\object.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6ext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6ktx.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6mfile.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\shader.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\vmath.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\gl3w.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\glcorearb.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\glext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\glxext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\wglext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\File\include\File.h">
+      <Filter>_Libs\File\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Align16.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Constants.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Enum.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\MathEngine.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Matrix.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Util.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Vect.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\AzulCore.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\AzulFileHdr.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\AzulHelper.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Camera.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\DebugOut.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Engine.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GpuVertTypes.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorByPosition.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTexture.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTextureLight.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_Sprite.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_SpriteBox.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureFlat.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureLight.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeAutoColor.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeConstantColor.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Image.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Keyboard.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\LibrarySetup.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Model.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Mouse.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Rect.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\ShaderObject.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Texture.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\TextureTGA.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\MathApp.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Quat.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\QuatApp.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\VectApp.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\ModelTools.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\BENgine.h">
+      <Filter>Application\BENgine</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\MemTracker\Framework.h">
+      <Filter>MemTracker</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\MemTracker\ProjectSettings.h">
+      <Filter>MemTracker</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\GameObject.h">
+      <Filter>Application\BENgine\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Scene\Scene.h">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Scene\SceneManager.h">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Camera\CameraManager.h">
+      <Filter>Application\BENgine\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Patterns\CommandBase.h">
+      <Filter>Application\BENgine\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Scene\SceneRegistrationBroker.h">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\RegistrationState.h">
+      <Filter>Application\BENgine\Game Object\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Model Manager\ModelManager.h">
+      <Filter>Application\BENgine\Asset Managers\Model Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Model Manager\ModelManagerAttorney.h">
+      <Filter>Application\BENgine\Asset Managers\Model Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Shader Manager\ShaderManager.h">
+      <Filter>Application\BENgine\Asset Managers\Shader Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Texture Manager\TextureManager.h">
+      <Filter>Application\BENgine\Asset Managers\Texture Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Updatable\Updatable.h">
+      <Filter>Application\BENgine\Game Object\Updatable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Updatable\UpdatableManager.h">
+      <Filter>Application\BENgine\Game Object\Updatable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Updatable\UpdateDeregistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Updatable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Updatable\UpdateRegistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Updatable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Drawable\Drawable.h">
+      <Filter>Application\BENgine\Game Object\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Drawable\DrawableManager.h">
+      <Filter>Application\BENgine\Game Object\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Drawable\DrawDeregistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Drawable\DrawRegistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Texture Manager\TextureManagerAttorney.h">
+      <Filter>Application\BENgine\Asset Managers\Texture Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Shader Manager\ShaderManagerAttorney.h">
+      <Filter>Application\BENgine\Asset Managers\Shader Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Drawable\DrawableAttorney.h">
+      <Filter>Application\BENgine\Game Object\Drawable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Updatable\UpdatableAttorney.h">
+      <Filter>Application\BENgine\Game Object\Updatable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Alarmable\Alarmable.h">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmableAttorney.h">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Scene\SceneAttorney.h">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmableManager.h">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmDeregistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmRegistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Alarmable\AlarmRegistrationCommandAttorney.h">
+      <Filter>Application\BENgine\Game Object\Alarmable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Inputable\Inputable.h">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Inputable\KeyEvent.h">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Inputable\KeyboardEventManager.h">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Inputable\SingleKeyEventManager.h">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Inputable\InputableAttorney.h">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Inputable\InputDeregistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Inputable\InputRegistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Inputable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Life Cycle\GameObjectAttorney.h">
+      <Filter>Application\BENgine\Game Object\Life Cycle</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Life Cycle\GameObjectEntryCommand.h">
+      <Filter>Application\BENgine\Game Object\Life Cycle</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Life Cycle\GameObjectExitCommand.h">
+      <Filter>Application\BENgine\Game Object\Life Cycle</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Time\TimeManager.h">
+      <Filter>Application\BENgine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Time\TimeManagerAttorney.h">
+      <Filter>Application\BENgine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Time\FreezeTime.h">
+      <Filter>Application\BENgine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\BENgineAttorney.h">
+      <Filter>Application\BENgine</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Scene\SceneManagerAttorney.h">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Scene\SceneChangeStrategy.h">
+      <Filter>Application\BENgine\Scene\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Scene\SceneManagerStrategyBase.h">
+      <Filter>Application\BENgine\Scene\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Scene\SceneNullStrategy.h">
+      <Filter>Application\BENgine\Scene\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\Collidable.h">
+      <Filter>Application\BENgine\Game Object\Collidable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionManager.h">
+      <Filter>Application\BENgine\Game Object\Collidable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Scene\SceneNull.h">
+      <Filter>Application\BENgine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollidableGroup.h">
+      <Filter>Application\BENgine\Game Object\Collidable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollidableAttorney.h">
+      <Filter>Application\BENgine\Game Object\Collidable</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionTestCommandBase.h">
+      <Filter>Application\BENgine\Game Object\Collidable\Test Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionTestPairCommand.h">
+      <Filter>Application\BENgine\Game Object\Collidable\Test Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionTestSelfCommand.h">
+      <Filter>Application\BENgine\Game Object\Collidable\Test Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionDispatch.h">
+      <Filter>Application\BENgine\Game Object\Collidable\Dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionDispatchBase.h">
+      <Filter>Application\BENgine\Game Object\Collidable\Dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionRegistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Collidable\Registration</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionDeregistrationCommand.h">
+      <Filter>Application\BENgine\Game Object\Collidable\Registration</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Collision\CollisionVolume.h">
+      <Filter>Application\BENgine\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Collision\CollisionVolumeBSphere.h">
+      <Filter>Application\BENgine\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Math Tools\BENgineMathTools.h">
+      <Filter>Application\BENgine\Math Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Visualizer\Visualizer.h">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Visualizer\CollisionVisualizerBSphereCommand.h">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Visualizer\VisualizerCommandBase.h">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Visualizer\VisualizerAttorney.h">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Visualizer\VisualizerCommandPool.h">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Camera\FreeCamera.h">
+      <Filter>Application\BENgine\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSprite.h">
+      <Filter>Application\BENgine\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Image Manager\ImageManager.h">
+      <Filter>Application\BENgine\Asset Managers\Image Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Image Manager\ImageManagerAttorney.h">
+      <Filter>Application\BENgine\Asset Managers\Image Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Utilities\DefaultColors.h">
+      <Filter>Application\BENgine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\Layers\Sprite2DLayer.h">
+      <Filter>Application\BENgine\Sprite\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\Layers\Sprite2DLayerManager.h">
+      <Filter>Application\BENgine\Sprite\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Collision\CollisionVolumeAABB.h">
+      <Filter>Application\BENgine\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Visualizer\CollisionVisualizerAABBCommand.h">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteComponent.h">
+      <Filter>Application\BENgine\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimation.h">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineAnimatedSprite.h">
+      <Filter>Application\BENgine\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationTimer.h">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Collision\CollisionVolumeOBB.h">
+      <Filter>Application\BENgine\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationCommandLoop.h">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineAnimatedSpriteAttorney.h">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationCommandBase.h">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Visualizer\CollisionVisualizerOBBCommand.h">
+      <Filter>Application\BENgine\Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\SpriteFont.h">
+      <Filter>Application\BENgine\Sprite\Sprite Font</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\SpriteFontManager.h">
+      <Filter>Application\BENgine\Sprite\Sprite Font</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\SpriteFontManagerAttorney.h">
+      <Filter>Application\BENgine\Sprite\Sprite Font</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\SpriteString.h">
+      <Filter>Application\BENgine\Sprite\Sprite Font</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteBase.h">
+      <Filter>Application\BENgine\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationTimerAttorney.h">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteCollection.h">
+      <Filter>Application\BENgine\Sprite\Sprite Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Terrain Object Manager\TerrainObjectManager.h">
+      <Filter>Application\BENgine\Asset Managers\Terrain Object Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Asset Managers\Terrain Object Manager\TerrainObjectManagerAttorney.h">
+      <Filter>Application\BENgine\Asset Managers\Terrain Object Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Terrain\TerrainObject.h">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Terrain\TerrainManager.h">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\Bullet.h">
+      <Filter>Application\Demo\Life cycle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\BulletPool.h">
+      <Filter>Application\Demo\Life cycle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\Enemy.h">
+      <Filter>Application\Demo\Life cycle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\Cockpit.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\AnimatedSpriteDemo.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\Axis.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\FirstPersonFlightCam.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\Frigate.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\SceneDemo.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\SceneTest.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\SpriteCollectionDemo.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\StitchSprite.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\WorldPlane.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Terrain\TerrainRectangleArea.h">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Terrain\TRAIterator.h">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Terrain\TerrainRectangleAreaAttorney.h">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Terrain\TerrainManagerStrategyBase.h">
+      <Filter>Application\BENgine\Terrain\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Terrain\TerrainManagerStrategyNull.h">
+      <Filter>Application\BENgine\Terrain\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Terrain\TerrainManagerStrategyInitialized.h">
+      <Filter>Application\BENgine\Terrain\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Terrain\TerrainManagerAttorney.h">
+      <Filter>Application\BENgine\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionDispatchTerrain.h">
+      <Filter>Application\BENgine\Game Object\Collidable\Dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Game Object\Collidable\CollisionTestTerrainCommand.h">
+      <Filter>Application\BENgine\Game Object\Collidable\Test Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\FlightScene.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\Layers\Sprite2DLayerGroup.h">
+      <Filter>Application\BENgine\Sprite\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteAnimationCommandBaseAttorney.h">
+      <Filter>Application\BENgine\Sprite\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\Layers\Sprite2DLayerAttorney.h">
+      <Filter>Application\BENgine\Sprite\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="BENgine\Sprite\BENgineSpriteBaseAttorney.h">
+      <Filter>Application\BENgine\Sprite</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\dist\GLFW\lib\GLFW_Debug.lib">
+      <Filter>_Libs\GLFW\lib</Filter>
+    </Library>
+    <Library Include="..\dist\SB6\lib\sb6_Debug.lib">
+      <Filter>_Libs\SB6\lib</Filter>
+    </Library>
+    <Library Include="..\dist\File\lib\File_Debug.lib">
+      <Filter>_Libs\File\lib</Filter>
+    </Library>
+    <Library Include="..\dist\Math\lib\MathEngine_Debug.lib">
+      <Filter>_Libs\Math\lib</Filter>
+    </Library>
+    <Library Include="..\dist\AzulCore\lib\AzulCore_Debug.lib">
+      <Filter>_Libs\AzulCore\lib</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Class Diagrams\AnimatedSprite.cd">
+      <Filter>Class Diagrams</Filter>
+    </None>
+    <None Include="Class Diagrams\BENgineSpritesBIG.cd">
+      <Filter>Class Diagrams</Filter>
+    </None>
+    <None Include="Class Diagrams\BENgineSpriteBase.cd">
+      <Filter>Class Diagrams</Filter>
+    </None>
+    <None Include="Class Diagrams\Collision.cd">
+      <Filter>Class Diagrams</Filter>
+    </None>
+    <None Include="Class Diagrams\Layers.cd">
+      <Filter>Class Diagrams</Filter>
+    </None>
+    <None Include="Class Diagrams\SpriteCollection.cd">
+      <Filter>Class Diagrams</Filter>
+    </None>
+    <None Include="Class Diagrams\SpriteRelated.cd">
+      <Filter>Class Diagrams</Filter>
+    </None>
+    <None Include="Class Diagrams\Terrain.cd">
+      <Filter>Class Diagrams</Filter>
+    </None>
+    <None Include="Class Diagrams\Updatable diagram.cd">
+      <Filter>Class Diagrams</Filter>
+    </None>
+  </ItemGroup>
+</Project>

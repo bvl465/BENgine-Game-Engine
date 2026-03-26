@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Command list is a list of command bases">
+    <Position X="9.164" Y="3.624" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="Scene">
+    <Position X="0.5" Y="3.5" Width="3.5" />
+    <Members>
+      <Field Name="alarmableManager" Hidden="true" />
+      <Field Name="cameraManager" Hidden="true" />
+      <Field Name="collisionManager" Hidden="true" />
+      <Method Name="GetCollisionManager" Hidden="true" />
+      <Method Name="GetCurrentCamera" Hidden="true" />
+      <Method Name="GetCurrentCamera2D" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Field Name="keyboardEventManager" Hidden="true" />
+      <Method Name="Scene" Hidden="true" />
+      <Method Name="SceneEnd" Hidden="true" />
+      <Method Name="SetCollisionPair" Hidden="true" />
+      <Method Name="SetCollisionSelf" Hidden="true" />
+      <Method Name="SetCurrentCamera" Hidden="true" />
+      <Method Name="SetCurrentCamera2D" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAQA0gAgCQAAgwCIgAAAAAAAQJIJADgAAAAgwgCAAAQ=</HashCode>
+      <FileName>BENgine\Scene\Scene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="registrationBroker" />
+      <Field Name="updatableManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="UpdatableManager">
+    <Position X="0.5" Y="9.25" Width="3.25" />
+    <Members>
+      <Method Name="~UpdatableManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAABAAAAAAEAAAAgABAAAAAAAgAEAAAAA=</HashCode>
+      <FileName>BENgine\Game Object\Updatable\UpdatableManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Updatable">
+    <Position X="5" Y="9.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAQAAAAiABAAAAAAAAAAAAAAAEBFAgIAAAAAE=</HashCode>
+      <FileName>BENgine\Game Object\Updatable\Updatable.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="curRegistrationState" />
+      <Field Name="registrationCmd" />
+      <Field Name="deregistrationCmd" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SceneRegistrationBroker">
+    <Position X="5.75" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAACAAAAAAAAQAAAAEAAAAAgAAAAAAg=</HashCode>
+      <FileName>BENgine\Scene\SceneRegistrationBroker.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateRegistrationCommand">
+    <Position X="6.5" Y="6.5" Width="2.5" />
+    <Members>
+      <Method Name="~UpdateRegistrationCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIQAAAAAAAAAAAAAAAAAAAAgAABQAAA=</HashCode>
+      <FileName>BENgine\Game Object\Updatable\UpdateRegistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateDeregistrationCommand">
+    <Position X="10.75" Y="6.75" Width="2" />
+    <Members>
+      <Method Name="~UpdateDeregistrationCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAAgAAAQAAA=</HashCode>
+      <FileName>BENgine\Game Object\Updatable\UpdateDeregistrationCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommandBase" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAQAAAAAAAAAAAgAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Patterns\CommandBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="RegistrationState">
+    <Position X="9.5" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAABAAAAAQAAAAIAAAAAAAA=</HashCode>
+      <FileName>BENgine\Game Object\RegistrationState.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

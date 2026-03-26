@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="List of BENgineSpriteComponent">
+    <Position X="6.405" Y="1.47" Height="0.493" Width="1.705" />
+  </Comment>
+  <Class Name="BENgineSpriteComponent">
+    <Position X="2.5" Y="0.5" Width="3.75" />
+    <Members>
+      <Method Name="BENgineSpriteComponent" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="BENgineSpriteComponent::FlipType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Sprite\BENgineSpriteComponent.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgBATQYAcAxUAAQAAACQEAAABFAoRBowABIYAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteBase">
+    <Position X="1.75" Y="10.75" Width="2" />
+    <Members>
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="BENgineSpriteBase::DrawLocation">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Sprite\BENgineSpriteBase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAAAABAAAQBgAAAgIAAgAAJAGCAAQEAAiACiQEgAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteCollection">
+    <Position X="5.25" Y="10.5" Width="2.25" />
+    <Members>
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="spriteComponentList" Type="std::list&lt;_Ty, _Alloc&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="10.812" />
+        <Point X="8.375" Y="10.812" />
+        <Point X="8.375" Y="2.062" />
+        <Point X="8" Y="2.062" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.115" Y="-5.464" Height="0.182" Width="1.591" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgBAQQAAUAwUQAQAAAGQgAAAAAAgRAogAIIIAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteCollection.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="spriteComponentList" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="std::list&lt;_Ty, _Alloc&gt;">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="std::list&lt;_Ty, _Alloc&gt;::_List_node_remove_op">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.42.34433\include\list</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEQAEqEKAHBEgABEAKEYAgAWFQQAJJIigQEgAhAFQwo=</HashCode>
+      <FileName>C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.42.34433\include\list</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineAnimatedSprite" Collapsed="true">
+    <Position X="1.75" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAECAsgQCAAAAAABCIAAAAAAAAAAoAAIQgIAAgAEA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineAnimatedSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSprite" Collapsed="true">
+    <Position X="1.75" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAggBQQQAAULwUAAQABpCWAAAAAAAgRAoQEAIIAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

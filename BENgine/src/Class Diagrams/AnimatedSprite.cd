@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="TimelineMap is a map of std::pair where the first item is the time and the second is of type BENgineSpriteAnimationCommandBase">
+    <Position X="10.804" Y="3.846" Height="0.63" Width="2.934" />
+  </Comment>
+  <Comment CommentText="PendingTimerList is a list of std::pair where the first item is the time and the second is of type BENgineSpriteAnimationCommandBase. It is unordered and is what commands are first added to.">
+    <Position X="10.815" Y="3.024" Height="0.582" Width="3.986" />
+  </Comment>
+  <Comment CommentText="FrameInfo is a std::pair where the first element is of time GraphicsObject_Sprite and the the second item is a float that is the amount of time the frame will be held for">
+    <Position X="14.9" Y="10.512" Height="0.667" Width="3.509" />
+  </Comment>
+  <Class Name="BENgineAnimatedSprite">
+    <Position X="4.75" Y="8.25" Width="4.25" />
+    <Members>
+      <Method Name="~BENgineAnimatedSprite" Hidden="true" />
+      <Field Name="angle" Hidden="true" />
+      <Method Name="BENgineAnimatedSprite" Hidden="true" />
+      <Field Name="centerX" Hidden="true" />
+      <Field Name="centerY" Hidden="true" />
+      <Method Name="GetAngleDegrees" Hidden="true" />
+      <Method Name="GetAngleRadians" Hidden="true" />
+      <Method Name="GetCenterX" Hidden="true" />
+      <Method Name="GetCenterY" Hidden="true" />
+      <Method Name="GetHeight" Hidden="true" />
+      <Method Name="GetPosX" Hidden="true" />
+      <Method Name="GetPosY" Hidden="true" />
+      <Method Name="GetScaleX" Hidden="true" />
+      <Method Name="GetScaleY" Hidden="true" />
+      <Method Name="GetWidth" Hidden="true" />
+      <Field Name="offset" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Field Name="posX" Hidden="true" />
+      <Field Name="posY" Hidden="true" />
+      <Field Name="rot" Hidden="true" />
+      <Method Name="RotateAboutAbsolutePointDegrees" Hidden="true" />
+      <Method Name="RotateAboutAbsolutePointRadians" Hidden="true" />
+      <Method Name="RotateAboutRelativePointDegrees" Hidden="true" />
+      <Method Name="RotateAboutRelativePointRadians" Hidden="true" />
+      <Field Name="scale" Hidden="true" />
+      <Field Name="scaleX" Hidden="true" />
+      <Field Name="scaleY" Hidden="true" />
+      <Method Name="SetAngleDegrees" Hidden="true" />
+      <Method Name="SetAngleRadians" Hidden="true" />
+      <Method Name="SetAnimationSpeed" Hidden="true" />
+      <Method Name="SetCenter" Hidden="true" />
+      <Method Name="SetFrame" Hidden="true" />
+      <Method Name="SetPositionAbsolute" Hidden="true" />
+      <Method Name="SetPositionRelative" Hidden="true" />
+      <Method Name="SetScaleFactor" Hidden="true" />
+      <Method Name="SetScalePixel" Hidden="true" />
+      <Method Name="SetScaleRotationTranslation" Hidden="true" />
+      <Field Name="trans" Hidden="true" />
+      <Method Name="TransformPositionAbsolute" Hidden="true" />
+      <Method Name="TransformPositionRelative" Hidden="true" />
+      <Method Name="UpdateWorld" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACCAECgooRQAAUAwUAAYABpCWAAIABoAoZSowEBoYAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineAnimatedSprite.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ptrSpriteAnimation" />
+      <Field Name="ptrAnimationCommandLoop" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BENgineSpriteAnimationCommandLoop">
+    <Position X="11.25" Y="8.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQAEAABQAAACQAAAAAAAAAAAAAAABAgAAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimationCommandLoop.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteAnimation">
+    <Position X="10.75" Y="10.25" Width="4" />
+    <Members>
+      <Method Name="~BENgineSpriteAnimation" Hidden="true" />
+      <Method Name="BENgineSpriteAnimation" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAAAAAAAAAEAAAABAAAAAIAAAAAIAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteAnimationCommandBase">
+    <Position X="15" Y="3" Width="5" />
+    <Members>
+      <Method Name="~BENgineSpriteAnimationCommandBase" Hidden="true" />
+      <Method Name="BENgineSpriteAnimationCommandBase" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="BENgineSpriteAnimationCommandBase::TimerLocation">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Sprite\BENgineSpriteAnimationCommandBase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAAAAEgAAQAAQCQAABCAAAAAAAAgAABAgAAgCAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimationCommandBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteAnimationTimer">
+    <Position X="6.25" Y="2.75" Width="4.5" />
+    <Members>
+      <Method Name="~BENgineSpriteAnimationTimer" Hidden="true" />
+      <Method Name="BENgineSpriteAnimationTimer" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAABJAABAAAAAAAAAAABAAIAAAggAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimationTimer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene">
+    <Position X="0.5" Y="2.5" Width="4.5" />
+    <Members>
+      <Method Name="~Scene" Hidden="true" />
+      <Field Name="alarmableManager" Hidden="true" />
+      <Field Name="cameraManager" Hidden="true" />
+      <Field Name="collisionManager" Hidden="true" />
+      <Method Name="Deregister" Hidden="true" />
+      <Method Name="Draw" Hidden="true" />
+      <Field Name="drawableManager" Hidden="true" />
+      <Method Name="GetCollisionManager" Hidden="true" />
+      <Method Name="GetCurrentCamera" Hidden="true" />
+      <Method Name="GetCurrentCamera2D" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Field Name="keyboardEventManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="Register" Hidden="true" />
+      <Field Name="registrationBroker" Hidden="true" />
+      <Method Name="Scene" Hidden="true" />
+      <Method Name="SceneEnd" Hidden="true" />
+      <Method Name="SetCollisionPair" Hidden="true" />
+      <Method Name="SetCollisionSelf" Hidden="true" />
+      <Method Name="SetCurrentCamera" Hidden="true" />
+      <Method Name="SetCurrentCamera2D" Hidden="true" />
+      <Method Name="SubmitCommand" Hidden="true" />
+      <Field Name="updatableManager" Hidden="true" />
+      <Method Name="Update" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQA0gAgCQAAgwCIgAAAAAAAQJIBADgAAAAgwgCAAAQ=</HashCode>
+      <FileName>BENgine\Scene\Scene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="animationTimer" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

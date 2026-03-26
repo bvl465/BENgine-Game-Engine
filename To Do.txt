@@ -1,0 +1,78 @@
+===========================
+TODO
+===========================
+
+Make an attorney to delete SpriteFonts
+
+Fix the issues that come from changing the alignment of text where the glyphs get flipped. Maybe make sprite strings derive from sprite collections and have the glyphs be the sprite components.
+
+Create Doxygen documentation
+
+Change Sprite2DLayerManager code for ProcessElements to have a more elegant solution to seeing if layers were created.
+
+---------------------------
+Schedule:
+---------------------------
+
+Finish commenting on the methods users will use 
+
+Create a game demo. Likely will require a transform class for that is currently in the back log for rigging of a tank. May also be good to update the terrain object cell coordinate system to make placement of objects more intuitive.
+
+Comment on non user facing code.
+
+---------------------------
+Bunny Ben Back log:
+  (\_/)
+ >(^*^)<
+  |U U|
+ '~' '~'
+---------------------------
+
+Make a transform class that offers the same rigging capabilities of sprite collections but in a 3D space
+
+Alter the TerrainObject creation to go from
+
+      +Z
+       ^
+       |
++X <---+---> -X
+       |
+       v
+      -Z
+
+to
+
+      +Z
+       ^
+       |
+-X <---+---> +X
+       |
+       v
+      -Z
+
+
+Make 3D sprites
+
+Add more animation commands. Add a pause function to animation base commands that removes the command from process animation and subtracts the current time from the time it was inserted in with to have it so when animation is played it plays with just as much time that was left before.
+
+Figure out how Azul recognizes multiple textures for models and how they get mapped so I can make animated textures for models.
+
+Add a sprite collection scale feature that modifies the sprites positions as well
+
+
+REMEMBER THIS GUY: https://www.youtube.com/watch?v=yu-YvBUpruc
+
+Ben's tool to avoid falling into rabbit holes of code when there are other more important pieces of code to work on. I paste this into parts of code where I start to fall into a rabbit hole to get out of it and come back to if time permits.
+
+//------------------------------------------------------
+//     /\   /\
+//    |  | |  |      Wake up, Ben...
+//     \ --- /       The Matrix has you...
+//    / | _ | \      Don't follow the white rabbit...
+//    \(= X =)/      Knock, knock, Ben.
+//     '~~~~~'
+//     / L_ \`\
+//   (\`~._)(_/
+//    (..)_; )_
+//    '--' `---'
+//------------------------------------------------------

@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="BENgineSprite">
+    <Position X="16" Y="20" Width="3.5" />
+    <InheritanceLine Type="BENgineSpriteBase" FixedToPoint="true">
+      <Path>
+        <Point X="18.125" Y="18.939" />
+        <Point X="18.125" Y="20" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAggBQQQAAULwUAAQABpCWAAAAAAAgRAoQEAIIAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSprite.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="updateWorldSetting" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BENgineSpriteComponent">
+    <Position X="19" Y="0.5" Width="3.25" />
+    <NestedTypes>
+      <Enum Name="BENgineSpriteComponent::FlipType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Sprite\BENgineSpriteComponent.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgBATQYAcAxUAAQAAACQEAAABFAoRBowABIYAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteBase">
+    <Position X="16.25" Y="11.75" Width="3.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="BENgineSpriteBase::DrawLocation">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Sprite\BENgineSpriteBase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <AssociationLine Name="ptr2DLayer" Type="Sprite2DLayer">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.362" Y="0.09" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAABAAAQBgAAAgIAAgAAJAGCAAQEAAiACiQEgAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteBase.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ptr2DLayer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sprite2DLayer">
+    <Position X="12.25" Y="12.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAAAAAAAIAAAQAEAEAABBAAAAAEgAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\Layers\Sprite2DLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteCollection">
+    <Position X="21.25" Y="12" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgBAQQAAUAwUQAQAAAGQgAAAAAAgRAogAIIIAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteCollection.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sprite2DLayerManager">
+    <Position X="7.5" Y="13" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AABQgIAAAAAAABAAAAAAAAAAAAQAAAAAAAAgQACAAIA=</HashCode>
+      <FileName>BENgine\Sprite\Layers\Sprite2DLayerManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteAnimationCommandLoop">
+    <Position X="9.25" Y="31.75" Width="4.5" />
+    <InheritanceLine Type="BENgineSpriteAnimationCommandBase" FixedToPoint="true">
+      <Path>
+        <Point X="11.625" Y="30.713" />
+        <Point X="11.625" Y="31.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimationCommandLoop.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineAnimatedSprite">
+    <Position X="16.25" Y="28.75" Width="3" />
+    <NestedTypes>
+      <Enum Name="BENgineAnimatedSprite::FrameCenteringSetting" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Sprite\BENgineAnimatedSprite.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <AssociationLine Name="ptrSpriteAnimation" Type="BENgineSpriteAnimation">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.224" Y="0.087" Height="0.182" Width="1.425" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ptrAnimationCommandLoop" Type="BENgineSpriteAnimationCommandLoop">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.35" Y="0.098" Height="0.182" Width="1.948" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAECAsgQCAAAAAABCIAAAAAAAAAAoAAIQgIAAgAEA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineAnimatedSprite.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ptrSpriteAnimation" />
+      <Field Name="ptrAnimationCommandLoop" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BENgineSpriteAnimation">
+    <Position X="21" Y="30.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAAAABAAAAEAAAABAAAAAIAAAAAIEgAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteAnimationCommandBase">
+    <Position X="9.25" Y="25" Width="4.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="BENgineSpriteAnimationCommandBase::TimerLocation">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Sprite\BENgineSpriteAnimationCommandBase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <AssociationLine Name="animatedSprite" Type="BENgineAnimatedSprite">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.409" Y="0.132" Height="0.182" Width="1.301" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAAEgAAQAAQCQAABCAAAAAAAAgAABAgAAgCAAQAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimationCommandBase.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="animatedSprite" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BENgineSpriteAnimationTimer">
+    <Position X="7.25" Y="17" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAABJAABAAAAAAAAAAABAAIAAAggAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimationTimer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene">
+    <Position X="1" Y="15.25" Width="4.5" />
+    <Members>
+      <Method Name="~Scene" Hidden="true" />
+      <Field Name="alarmableManager" Hidden="true" />
+      <Field Name="cameraManager" Hidden="true" />
+      <Field Name="collisionManager" Hidden="true" />
+      <Method Name="Deregister" Hidden="true" />
+      <Field Name="drawableManager" Hidden="true" />
+      <Method Name="GetCurrentCamera" Hidden="true" />
+      <Method Name="GetCurrentCamera2D" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Field Name="keyboardEventManager" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="Register" Hidden="true" />
+      <Field Name="registrationBroker" Hidden="true" />
+      <Method Name="Scene" Hidden="true" />
+      <Method Name="SceneEnd" Hidden="true" />
+      <Method Name="SetCollisionPair" Hidden="true" />
+      <Method Name="SetCollisionSelf" Hidden="true" />
+      <Method Name="SetCollisionTerrain" Hidden="true" />
+      <Method Name="SetCurrentCamera" Hidden="true" />
+      <Method Name="SetCurrentCamera2D" Hidden="true" />
+      <Method Name="SubmitCommand" Hidden="true" />
+      <Field Name="terrainManager" Hidden="true" />
+      <Field Name="updatableManager" Hidden="true" />
+      <Method Name="Update" Hidden="true" />
+    </Members>
+    <AssociationLine Name="animationTimer" Type="BENgineSpriteAnimationTimer">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.318" Y="0.132" Height="0.182" Width="1.351" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="sprite2DLayerManager" Type="Sprite2DLayerManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.261" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAQA0gAgCQAAgwCIgAAAAAAAQJIJADgAAAAgwgCAAAQ=</HashCode>
+      <FileName>BENgine\Scene\Scene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="animationTimer" />
+      <Field Name="sprite2DLayerManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="SpriteAutoUpdateWorldSetting">
+    <Position X="11.75" Y="21.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSprite.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Sprite2DLayerManager holds a list of the SpriteLayers">
+    <Position X="12.49" Y="4.405" Height="0.739" Width="1.7" />
+  </Comment>
+  <Class Name="BENgineSpriteBase">
+    <Position X="4.25" Y="2.5" Width="3.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="BENgineSpriteBase::DrawLocation">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Sprite\BENgineSpriteBase.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAAAABAAAQBgAAAgIAAgAAJAGCAAQEAAiACiQEgAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteBase.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ptr2DLayer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BENgineSprite">
+    <Position X="4.75" Y="10.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAggBQQQAAULwUAAQABpCWAAAAAAAgRAoQEAIIAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineAnimatedSprite">
+    <Position X="8.25" Y="10.25" Width="3.5" />
+    <Members>
+      <Method Name="GetCurrentFrame" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="BENgineAnimatedSprite::FrameCenteringSetting" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Sprite\BENgineAnimatedSprite.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAECAsgQCAAAAAABCIAAAAAAAAAAoAAIQgIAAgAEA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineAnimatedSprite.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ptrSpriteAnimation" />
+      <Field Name="ptrAnimationCommandLoop" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sprite2DLayer">
+    <Position X="9.25" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAAAAAAAIAAAQAEAEAABBAAAAAEgAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\Layers\Sprite2DLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sprite2DLayerManager">
+    <Position X="14.5" Y="3.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AABQgIAAAAAAABAAAAAAAAAAAAQAAAAAAAAgQACAAIA=</HashCode>
+      <FileName>BENgine\Sprite\Layers\Sprite2DLayerManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene">
+    <Position X="20.25" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>gAQA0gAgCQAAgwCIgAAAAAAAQJIJADgAAAAgwgCAAAQ=</HashCode>
+      <FileName>BENgine\Scene\Scene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sprite2DLayerManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BENgineSpriteAnimation">
+    <Position X="14" Y="14" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAAAABAAAAEAAAABAAAAAIAAAAAIEgAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BENgineSpriteAnimationCommandLoop">
+    <Position X="14" Y="10.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Sprite\BENgineSpriteAnimationCommandLoop.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneAttorney">
+    <Position X="19.75" Y="11.75" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SceneAttorney::AnimatedSprite">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Scene\SceneAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneAttorney::Draw" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Scene\SceneAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneAttorney::GameLoop" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Scene\SceneAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneAttorney::Collision" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Scene\SceneAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneAttorney::GameObj" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Scene\SceneAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneAttorney::Layer">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Scene\SceneAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneAttorney::Input" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Scene\SceneAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneAttorney::Alarm" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Scene\SceneAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SceneAttorney::Update" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Scene\SceneAttorney.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BENgine\Scene\SceneAttorney.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

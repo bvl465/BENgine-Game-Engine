@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CollisionDispatch&lt;C1, C2&gt;">
+    <Position X="17.25" Y="7.25" Width="2" />
+    <InheritanceLine Type="CollisionDispatchBase" FixedFromPoint="true">
+      <Path>
+        <Point X="15.875" Y="5.43" />
+        <Point X="15.875" Y="6.875" />
+        <Point X="18.25" Y="6.875" />
+        <Point X="18.25" Y="7.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAhAAAAAAA=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\CollisionDispatch.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionDispatchBase">
+    <Position X="9.25" Y="3.75" Width="9.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAQAAAAAAAAAAAAAACAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\CollisionDispatchBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionDispatchTerrain&lt;C1&gt;">
+    <Position X="12.75" Y="7.5" Width="2.5" />
+    <InheritanceLine Type="CollisionDispatchBase" FixedFromPoint="true">
+      <Path>
+        <Point X="15.875" Y="5.43" />
+        <Point X="15.875" Y="6.875" />
+        <Point X="14" Y="6.875" />
+        <Point X="14" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAgAAgAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\CollisionDispatchTerrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionTestPairCommand">
+    <Position X="1.5" Y="9" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAAAwAEAAAIA=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\CollisionTestPairCommand.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pG1" />
+      <Field Name="pG2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CollisionTestSelfCommand">
+    <Position X="5" Y="9" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAQAAAAAACAAAAAAAAAAAAAwAAAAAIA=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\CollisionTestSelfCommand.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pG1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CollisionTestTerrainCommand">
+    <Position X="9.5" Y="9" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAQQAAAAACAAAAAAAAAAAAAAwAAAAAIA=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\CollisionTestTerrainCommand.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pG1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CollidableGroup">
+    <Position X="2.75" Y="13.5" Width="9.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAEAAgAAAAAAAAAAQAAAAAAJAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\CollidableGroup.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionTestCommandBase">
+    <Position X="5" Y="6.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAgAAAAAgAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\CollisionTestCommandBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collidable">
+    <Position X="0.5" Y="18.5" Width="3" />
+    <NestedTypes>
+      <Enum Name="Collidable::VolumeType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BENgine\Game Object\Collidable\Collidable.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>JIAAAEMCQAAAIiAAIAACKAEAAAAAAAAABGAgIAAAAAA=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\Collidable.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pBSphere" />
+      <Field Name="collisionVolume" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CollisionVolumeBSphere">
+    <Position X="4.75" Y="21" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>ABgAYAAACAAAAAAAAAI2AIAAIAAAAAAAgABgAAgAAAA=</HashCode>
+      <FileName>BENgine\Collision\CollisionVolumeBSphere.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionVolumeOBB">
+    <Position X="9.25" Y="21" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AogAEAAAIAAAABCgAAI2AAAAKAAAAAAAgEBhQIAAAAA=</HashCode>
+      <FileName>BENgine\Collision\CollisionVolumeOBB.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionVolumeAABB">
+    <Position X="12.25" Y="21" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AMgAEAAAIAAAAAAgAAI2AAAAIAAEAAAAgEBhQIAAAAA=</HashCode>
+      <FileName>BENgine\Collision\CollisionVolumeAABB.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionVolume">
+    <Position X="10" Y="17.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAI2AEAAAAAAAAAAgABgAAAAAAA=</HashCode>
+      <FileName>BENgine\Collision\CollisionVolume.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionManager">
+    <Position X="0.5" Y="1.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAQAAQACADAAQAAAAAAAAggBAAAAgoACAAAQ=</HashCode>
+      <FileName>BENgine\Game Object\Collidable\CollisionManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
