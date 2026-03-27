@@ -40,7 +40,7 @@ Cockpit::Cockpit() : posX(.5f * (float)(BENgine::GetWidth())), posY(.5f * (float
 	reticle->SetScaleFactor(.25f, .25f);
 	reticle->SetPositionRelative(.5f, .5f);
 	reticle->SetLayerPriority(300);
-	reticle->AddToLayer("CockpitHUD");
+	reticle->AddToLayer("Layer1");
 	reticle->UpdateWorld(); //IMPORTANT TO DO SINCE UPDATE WORLD HAS TO BE MANUALLY CALLED
 
 

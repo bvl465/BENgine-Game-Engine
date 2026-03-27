@@ -44,10 +44,6 @@ Frigate::Frigate()
 	SubmitKeyRegistration(AZUL_KEY::KEY_L, KeyEvent::KEY_DOWN);
 	SubmitKeyRegistration(AZUL_KEY::KEY_K, KeyEvent::KEY_DOWN);
 	SubmitKeyRegistration(AZUL_KEY::KEY_I, KeyEvent::KEY_DOWN);
-	SubmitKeyRegistration(AZUL_KEY::KEY_T, KeyEvent::KEY_PRESSED);
-	SubmitKeyRegistration(AZUL_KEY::KEY_M, KeyEvent::KEY_PRESSED);
-	SubmitKeyRegistration(AZUL_KEY::KEY_N, KeyEvent::KEY_PRESSED);
-	SubmitKeyRegistration(AZUL_KEY::KEY_Z, KeyEvent::KEY_PRESSED);
 	SubmitKeyRegistration(AZUL_KEY::KEY_X, KeyEvent::KEY_PRESSED);
 	SetCollidableGroup<Frigate>();
 	SubmitCollisionRegistration();
@@ -79,10 +75,6 @@ Frigate::~Frigate()
 	SubmitKeyDeregistration(AZUL_KEY::KEY_L, KeyEvent::KEY_DOWN);
 	SubmitKeyDeregistration(AZUL_KEY::KEY_K, KeyEvent::KEY_DOWN);
 	SubmitKeyDeregistration(AZUL_KEY::KEY_I, KeyEvent::KEY_DOWN);
-	SubmitKeyDeregistration(AZUL_KEY::KEY_T, KeyEvent::KEY_PRESSED);
-	SubmitKeyDeregistration(AZUL_KEY::KEY_M, KeyEvent::KEY_PRESSED);
-	SubmitKeyDeregistration(AZUL_KEY::KEY_N, KeyEvent::KEY_PRESSED);
-	SubmitKeyDeregistration(AZUL_KEY::KEY_Z, KeyEvent::KEY_PRESSED);
 	SubmitKeyDeregistration(AZUL_KEY::KEY_X, KeyEvent::KEY_PRESSED);
 	SubmitCollisionDeregistration();
 	delete pGObj_SpaceFrigateLight;
@@ -194,12 +186,6 @@ void Frigate::KeyPress(AZUL_KEY k)
 			break;
 		case AZUL_KEY::KEY_L:
 			ShipRotTrans = Matrix(ROT_Y, -ShipRotAng) * ShipRotTrans;
-			break;
-		case AZUL_KEY::KEY_T:
-			SceneManager::SetNextScene(new FlightScene);
-			break;
-		case AZUL_KEY::KEY_Z:
-			//SceneManager::SetNextScene(new FlightScene);
 			break;
 		case AZUL_KEY::KEY_X:
 			//Set Alignment is currently bugged.

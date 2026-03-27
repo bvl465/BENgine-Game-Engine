@@ -11,6 +11,7 @@ class Frigate;
 class SpriteCollectionDemo;
 class FirstPersonFlightCam;
 class Cockpit;
+class SceneSwitchingDemo;
 
 class FlightScene : public Scene
 {
@@ -25,15 +26,9 @@ private:
 	
 	FirstPersonFlightCam* flightCam = nullptr;
 	
-	Frigate* frigate = nullptr;
-	
-	Enemy* enemy = nullptr;
-	Enemy* enemy2 = nullptr;
-	
-	Axis* axis = nullptr;
 	Cockpit* cockpit = nullptr;
 
-	SpriteCollectionDemo* spriteCollectionDemo = nullptr;
+	SceneSwitchingDemo* sceneSwitcher = nullptr;
 	virtual void Initialize() override;
 	virtual void SceneEnd() override;
 

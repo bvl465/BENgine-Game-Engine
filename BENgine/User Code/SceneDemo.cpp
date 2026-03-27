@@ -11,6 +11,7 @@
 #include "Cockpit.h"
 #include "../src/BENgine/Scene/SceneManager.h"
 #include "FirstPersonFlightCam.h"
+#include "SceneSwitchingDemo.h"
 
 
 SceneDemo::~SceneDemo()
@@ -24,17 +25,20 @@ SceneDemo::~SceneDemo()
 	delete freeCam;
 	delete enemy;
 	delete enemy2;
+	delete sceneSwitcher;
 	//delete cockpit;
 	//delete terrain;
 	//delete animatedsprite;
 	delete spriteCollectionDemo;
+	
 }
 
 void SceneDemo::Initialize()
 {
 	(SceneManager::GetCurrentScene())->GetTerrainManager()->SetCurrentTerrain("pTerrainTestTerrainObject");
 	//terrain = new Terrain("HMTest16.tga", 400, 100, 0, TextureManager::GetTexture("pHeightMapTest"), 1, 1);
-	CreateLayers({ "Layer1", "Layer2", "Layer3" });
+	CreateLayers(std::list<std::string>{ "Layer1", "Layer2", "Layer3"});
+
 	freeCam = new FreeCamera();
 	SetCurrentCamera(freeCam->GetCamera());
 	//starFighter = new StarFighter();
@@ -57,6 +61,7 @@ void SceneDemo::Initialize()
 	//animatedsprite = new AnimatedSpriteDemo();
 	spriteCollectionDemo = new SpriteCollectionDemo();
 
+	sceneSwitcher = new SceneSwitchingDemo();
 
 	SetCollisionSelf<Frigate>();
 	SetCollisionPair<Enemy, Frigate>();

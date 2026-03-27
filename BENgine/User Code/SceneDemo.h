@@ -14,6 +14,7 @@ class SpriteCollectionDemo;
 class Terrain;
 class FirstPersonFlightCam;
 class FreeCamera;
+class SceneSwitchingDemo;
 
 class SceneDemo : public Scene
 {
@@ -35,6 +36,8 @@ private:
 	//Frigate* frigate2 = nullptr;
 	Enemy* enemy = nullptr;
 	Enemy* enemy2 = nullptr;
+
+	SceneSwitchingDemo* sceneSwitcher = nullptr;
 
 	StitchSprite* stitch = nullptr;
 
