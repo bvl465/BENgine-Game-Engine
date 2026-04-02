@@ -8,7 +8,8 @@ FreeCamera::FreeCamera() : freeCam(new Camera(Camera::Type::PERSPECTIVE_3D))
 	Vect up3DCam(0.0f, 1.0f, 0.0f);
 	Vect pos3DCam(50.0f, 50.0f, 150.0f);
 	Vect lookAt3DCam(0.0f, 0.0f, 0.0f);
-	freeCam->setOrientAndPosition(up3DCam, lookAt3DCam, pos3DCam);
+	freeCam->setOrientAndPosition(camUp * camRot, camPos + camDir * camRot, camPos);
+	//freeCam->setOrientAndPosition(camUp, camDir, camPos);
 	freeCam->updateCamera();
 	SceneEntry();
 }

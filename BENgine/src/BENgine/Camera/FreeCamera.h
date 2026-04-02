@@ -29,7 +29,7 @@ private:
     Matrix camRot = Matrix(IDENTITY);		// No rotation initially
     Vect camUp = Vect(0.f, 1.f, 0.f);			// Using local Y axis as 'Up'
     Vect camDir = Vect(0.f, 0.f, 1.f);			// Using the local Z axis as 'forward'
-    Vect camPos = Vect(50.f, 50.f, 100.0f);
+    Vect camPos = Vect(50.f, 50.f, -50.0f);
     float camTranSpeed = 2.f;
     float camTranSpeedNormal = 2.f;
     float camTranSpeedSlow = .5f;

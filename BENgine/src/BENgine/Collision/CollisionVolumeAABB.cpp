@@ -98,27 +98,29 @@ Vect CollisionVolumeAABB::GetBSphereCenterFromCollisionVolume() const
 	return center;
 }
 
-const Vect& CollisionVolumeAABB::GetCornerMin() const
-{
-	return cornerMin;
-}
+//NOW INLINE FUNCTIONS
 
-const Vect& CollisionVolumeAABB::GetCornerMax() const
-{
-	return cornerMax;
-}
+//const Vect& CollisionVolumeAABB::GetCornerMin() const
+//{
+//	return cornerMin;
+//}
 
-const Matrix& CollisionVolumeAABB::GetWorld() const
-{
-	return world;
-}
+//const Vect& CollisionVolumeAABB::GetCornerMax() const
+//{
+//	return cornerMax;
+//}
 
-const Vect& CollisionVolumeAABB::GetCenter() const
-{
-	return center;
-}
+//const Matrix& CollisionVolumeAABB::GetWorld() const
+//{
+//	return world;
+//}
 
-const Vect& CollisionVolumeAABB::GetHalfDiagonal() const
-{
-	return halfDiagonal;
-}
+//const Vect& CollisionVolumeAABB::GetCenter() const
+//{
+//	return center;
+//}
+
+//const Vect& CollisionVolumeAABB::GetHalfDiagonal() const
+//{
+//	return halfDiagonal;
+//}

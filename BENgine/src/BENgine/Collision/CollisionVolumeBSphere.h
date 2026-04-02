@@ -28,13 +28,22 @@ public:
 	virtual void DebugView(const Vect& color) const override;
 
 	//Returns the center of the Bounding Sphere.
-	const Vect& GetCenter() const;
+	inline const Vect& GetCenter() const
+	{
+		return center;
+	};
 
 	//Returns the radius of the Bounding Sphere.
-	float GetRadius() const;
+	inline float GetRadius() const
+	{
+		return radius;
+	};
 
 	//Returns the radius squared of the Bounding Sphere.
-	float GetRadiusSquared() const;
+	inline float GetRadiusSquared() const
+	{
+		return radius * radius;
+	};
 
 	//Computes the center and radius of the Bounding Sphere based on the Model and the world matrix passed.
 	//Parameters:

@@ -8,21 +8,6 @@ void CollisionVolumeBSphere::DebugView(const Vect& color) const
 	Visualizer::ShowBSphere(*this, color);
 }
 
-const Vect& CollisionVolumeBSphere::GetCenter() const
-{
-	return center;
-}
-
-float CollisionVolumeBSphere::GetRadius() const
-{
-	return radius;
-}
-
-float CollisionVolumeBSphere::GetRadiusSquared() const
-{
-	return radius * radius;
-}
-
 void CollisionVolumeBSphere::ComputeData(Model& mod, const Matrix& mat)
 {
 	center = mod.getCenter() * mat;
@@ -66,3 +51,20 @@ bool CollisionVolumeBSphere::IntersectVisit(const CollisionVolumeBSphere& other)
 {
 	return BENgineMathTools::BSphereToBSphereIntersect(*this, other);
 }
+
+//NOW INLINE FUNCTIONS
+
+//const Vect& CollisionVolumeBSphere::GetCenter() const
+//{
+//	return center;
+//}
+
+//float CollisionVolumeBSphere::GetRadius() const
+//{
+//	return radius;
+//}
+
+//float CollisionVolumeBSphere::GetRadiusSquared() const
+//{
+//	return radius * radius;
+//}

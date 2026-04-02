@@ -34,19 +34,34 @@ public:
 
 
 	//Returns the corner of the AABB with the smallest x, y, and z values.
-	const Vect& GetCornerMin() const;
+	inline const Vect& GetCornerMin() const
+	{
+		return cornerMin;
+	};
 
 	//Returns the corner of the AABB with the largest x, y, and z values.
-	const Vect& GetCornerMax() const;
+	inline const Vect& GetCornerMax() const
+	{
+		return cornerMax;
+	};
 
 	//Returns the world matrix of the AABB.
-	const Matrix& GetWorld() const;
+	inline const Matrix& GetWorld() const
+	{
+		return world;
+	};
 
 	//Returns the center of the AABB.
-	const Vect& GetCenter() const;
+	inline const Vect& GetCenter() const
+	{
+		return center;
+	}
 
 	//Returns the half diagonal of the AABB .5f(cornerMax - cornerMin).
-	const Vect& GetHalfDiagonal() const;
+	inline const Vect& GetHalfDiagonal() const
+	{
+		return halfDiagonal;
+	};
 
 	//Computes the cornerMin, cornerMax, center, and halfDiagonal of the AABB based on the Model and the world matrix passed.
 	//Parameters:

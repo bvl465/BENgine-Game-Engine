@@ -277,6 +277,12 @@
     <ClCompile Include="BENgine\Sprite\BENgineSpriteComponent.cpp">
       <Filter>Application\BENgine\Sprite</Filter>
     </ClCompile>
+    <ClCompile Include="..\User Code\LayerControllerDemo.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Code\SceneSwitchingDemo.cpp">
+      <Filter>Application\Demo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="_Libs">
@@ -991,6 +997,12 @@
     </ClInclude>
     <ClInclude Include="BENgine\Sprite\BENgineSpriteBaseAttorney.h">
       <Filter>Application\BENgine\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\LayerControllerDemo.h">
+      <Filter>Application\Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Code\SceneSwitchingDemo.h">
+      <Filter>Application\Demo</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

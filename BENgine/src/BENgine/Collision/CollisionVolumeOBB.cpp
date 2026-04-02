@@ -61,7 +61,7 @@ void CollisionVolumeOBB::DebugView(const Vect& color) const
 float CollisionVolumeOBB::GetBSphereRadiusFromCollisionVolume() const
 {
 	return (world.get(ROW_0).mag() * halfDiagonal).mag();
-	//GROSS YUCKY YUCK YUCK YUCK EW EW EW EW EW EW
+	//.mag() is very expensive
 }
 
 Vect CollisionVolumeOBB::GetBSphereCenterFromCollisionVolume() const
@@ -69,32 +69,34 @@ Vect CollisionVolumeOBB::GetBSphereCenterFromCollisionVolume() const
 	return center;
 }
 
-const Vect& CollisionVolumeOBB::GetCornerMin() const
-{
-	return cornerMin;
-}
+//NOW INLINE FUNCTIONS
 
-const Vect& CollisionVolumeOBB::GetCornerMax() const
-{
-	return cornerMax;
-}
+//const Vect& CollisionVolumeOBB::GetCornerMin() const
+//{
+//	return cornerMin;
+//}
 
-const Matrix& CollisionVolumeOBB::GetWorld() const
-{
-	return world;
-}
+//const Vect& CollisionVolumeOBB::GetCornerMax() const
+//{
+//	return cornerMax;
+//}
 
-const Vect& CollisionVolumeOBB::GetCenter() const
-{
-	return center;
-}
+//const Matrix& CollisionVolumeOBB::GetWorld() const
+//{
+//	return world;
+//}
 
-const Vect& CollisionVolumeOBB::GetHalfDiagonal() const
-{
-	return halfDiagonal;
-}
+//const Vect& CollisionVolumeOBB::GetCenter() const
+//{
+//	return center;
+//}
 
-const float CollisionVolumeOBB::GetScaleFactorSquared() const
-{
-	return scaleFactorSquared;
-}
+//const Vect& CollisionVolumeOBB::GetHalfDiagonal() const
+//{
+//	return halfDiagonal;
+//}
+
+//const float CollisionVolumeOBB::GetScaleFactorSquared() const
+//{
+//	return scaleFactorSquared;
+//}

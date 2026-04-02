@@ -123,7 +123,9 @@
     <ClCompile Include="..\User Code\FirstPersonFlightCam.cpp" />
     <ClCompile Include="..\User Code\FlightScene.cpp" />
     <ClCompile Include="..\User Code\Frigate.cpp" />
+    <ClCompile Include="..\User Code\LayerControllerDemo.cpp" />
     <ClCompile Include="..\User Code\SceneDemo.cpp" />
+    <ClCompile Include="..\User Code\SceneSwitchingDemo.cpp" />
     <ClCompile Include="..\User Code\SceneTest.cpp" />
     <ClCompile Include="..\User Code\SpriteCollectionDemo.cpp" />
     <ClCompile Include="..\User Code\StitchSprite.cpp" />
@@ -270,7 +272,9 @@
     <ClInclude Include="..\User Code\FirstPersonFlightCam.h" />
     <ClInclude Include="..\User Code\FlightScene.h" />
     <ClInclude Include="..\User Code\Frigate.h" />
+    <ClInclude Include="..\User Code\LayerControllerDemo.h" />
     <ClInclude Include="..\User Code\SceneDemo.h" />
+    <ClInclude Include="..\User Code\SceneSwitchingDemo.h" />
     <ClInclude Include="..\User Code\SceneTest.h" />
     <ClInclude Include="..\User Code\SpriteCollectionDemo.h" />
     <ClInclude Include="..\User Code\StitchSprite.h" />
