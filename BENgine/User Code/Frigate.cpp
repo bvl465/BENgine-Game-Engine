@@ -40,6 +40,7 @@ Frigate::Frigate()
 	SubmitKeyRegistration(AZUL_KEY::KEY_K, KeyEvent::KEY_PRESSED);
 	SubmitKeyRegistration(AZUL_KEY::KEY_I, KeyEvent::KEY_PRESSED);
 	SubmitKeyRegistration(AZUL_KEY::KEY_B, KeyEvent::KEY_PRESSED);
+	SubmitKeyRegistration(AZUL_KEY::KEY_SPACE, KeyEvent::KEY_DOWN);
 	SubmitKeyRegistration(AZUL_KEY::KEY_J, KeyEvent::KEY_DOWN);
 	SubmitKeyRegistration(AZUL_KEY::KEY_L, KeyEvent::KEY_DOWN);
 	SubmitKeyRegistration(AZUL_KEY::KEY_K, KeyEvent::KEY_DOWN);
@@ -71,6 +72,7 @@ Frigate::~Frigate()
 	SubmitKeyDeregistration(AZUL_KEY::KEY_K, KeyEvent::KEY_PRESSED);
 	SubmitKeyDeregistration(AZUL_KEY::KEY_I, KeyEvent::KEY_PRESSED);
 	SubmitKeyDeregistration(AZUL_KEY::KEY_B, KeyEvent::KEY_PRESSED);
+	SubmitKeyDeregistration(AZUL_KEY::KEY_SPACE, KeyEvent::KEY_DOWN);
 	SubmitKeyDeregistration(AZUL_KEY::KEY_J, KeyEvent::KEY_DOWN);
 	SubmitKeyDeregistration(AZUL_KEY::KEY_L, KeyEvent::KEY_DOWN);
 	SubmitKeyDeregistration(AZUL_KEY::KEY_K, KeyEvent::KEY_DOWN);
@@ -125,31 +127,28 @@ void Frigate::Update()
 	pGObj_SpaceFrigateLight->SetWorld(world);
 	this->UpdateCollisionData(world);
 
-
-	// Toggle the bounding sphere's visibility
-	if (Keyboard::GetKeyState(AZUL_KEY::KEY_SPACE))
-	{
-		if (collisionTrue)
-		{
-			//GetCollisionVolume().DebugView(Colors::Red);
-			//GetBSphere().DebugView(Colors::Red);
-			Visualizer::ShowBSphere(this->GetBSphere(), Colors::Red);
-		}
-		else
-		{
-			//GetCollisionVolume().DebugView(Colors::Blue);
-			//GetBSphere().DebugView(Colors::Blue);
-			Visualizer::ShowBSphere(this->GetBSphere(), Colors::Blue);
-		}
-		
-	}
-	else
-	{
-		//Visualizer::ShowBSphere(this->GetBSphere(), Blue);
-		BsphereToggle = false;
-		//DebugMsg::out("Bounding sphere: Off\n");
-	}
-	collisionTrue = false;
+	//if (Keyboard::GetKeyState(AZUL_KEY::KEY_SPACE))
+	//{
+	//	if (collisionTrue)
+	//	{
+	//		//GetCollisionVolume().DebugView(Colors::Red);
+	//		//GetBSphere().DebugView(Colors::Red);
+	//		GetBSphere().DebugView(Colors::Red);
+	//		GetCollisionVolume().DebugView(Colors::Red);
+	//		
+	//
+	//	}
+	//	else
+	//	{
+	//		//GetCollisionVolume().DebugView(Colors::Blue);
+	//		//GetBSphere().DebugView(Colors::Blue);
+	//		//Visualizer::ShowBSphere(this->GetBSphere(), Colors::Blue);
+	//		GetBSphere().DebugView(Colors::Blue);
+	//		GetCollisionVolume().DebugView(Colors::Blue);
+	//	}
+	//	
+	//}
+	//collisionTrue = false;
 
 
 }
@@ -224,9 +223,26 @@ void Frigate::KeyDown(AZUL_KEY k)
 		case AZUL_KEY::KEY_L:
 			ShipRotTrans = Matrix(ROT_Y, -ShipRotAng) * ShipRotTrans;
 			break;
+		case AZUL_KEY::KEY_SPACE:
+			if (collisionTrue)
+			{
+				//GetCollisionVolume().DebugView(Colors::Red);
+				//GetBSphere().DebugView(Colors::Red);
+				GetBSphere().DebugView(Colors::Red);
+				GetCollisionVolume().DebugView(Colors::Red);
+
+			}
+			else
+			{
+				//GetCollisionVolume().DebugView(Colors::Blue);
+				//GetBSphere().DebugView(Colors::Blue);
+				//Visualizer::ShowBSphere(this->GetBSphere(), Colors::Blue);
+				GetBSphere().DebugView(Colors::Blue);
+				GetCollisionVolume().DebugView(Colors::Blue);
+			}
+			collisionTrue = false;
 		}
 	}
-	
 }
 
 void Frigate::IgnoreKeyPress()

@@ -29,13 +29,10 @@ bool CollisionVolumeOBB::IntersectVisit(const CollisionVolumeAABB& other) const
 {
 
 	return BENgineMathTools::AABBToOBBIntersect(other, *this);
-	//return BENgineMathTools::AABBToOBBIntersect(other, *this);
 }
 
 bool CollisionVolumeOBB::IntersectVisit(const CollisionVolumeOBB& other) const
 {
-	//other;
-	//return false;
 	return BENgineMathTools::OBBToOBBIntersect(*this, other);;
 }
 
@@ -47,6 +44,8 @@ bool CollisionVolumeOBB::IntersectAccept(const CollisionVolume& other) const
 
 void CollisionVolumeOBB::InitializeOBBWithModel(const Model& mod)
 {
+	//getMinAABB and getMaxAABB return the AABB min and max in world space respectively.
+	//This means it's really returning the OBB min and max.
 	cornerMin = mod.getMinAABB();
 	cornerMax = mod.getMaxAABB();
 	halfDiagonal = (cornerMax - cornerMin) * 0.5f;

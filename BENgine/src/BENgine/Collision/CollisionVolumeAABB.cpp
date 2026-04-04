@@ -3,9 +3,6 @@
 #include "../Math Tools/BENgineMathTools.h"
 #include "CollisionVolumeAABB.h"
 
-
-
-
 void CollisionVolumeAABB::ComputeData(Model& mod, const Matrix& mat)
 {
 	Vect* curVect = mod.getVectList();
@@ -47,7 +44,14 @@ void CollisionVolumeAABB::ComputeData(Model& mod, const Matrix& mat)
 	cornerMax.set(maxX, maxY, maxZ);
 	halfDiagonal = (cornerMax - cornerMin) * 0.5f;
 	center = cornerMin + halfDiagonal;
-	world = Matrix(SCALE, cornerMax - cornerMin) * Matrix(TRANS, .5f * (cornerMin + cornerMax));
+
+	// Option 1 Multiplication
+	////world = Matrix(SCALE, cornerMax - cornerMin) * Matrix(TRANS, .5f * (cornerMin + cornerMax));
+	//world = Matrix(SCALE, cornerMax - cornerMin) * Matrix(TRANS, center);
+	
+	// Option 2 Setting
+	world.set(SCALE, cornerMax - cornerMin);
+	world.set(ROW_3, center);
 }
 
 
@@ -64,7 +68,6 @@ bool CollisionVolumeAABB::IntersectVisit(const CollisionVolumeAABB& other) const
 bool CollisionVolumeAABB::IntersectVisit(const CollisionVolumeOBB& other) const
 {
 	return BENgineMathTools::AABBToOBBIntersect(*this, other);
-	//return BENgineMathTools::AABBToOBBIntersect(*this, other);
 }
 
 
@@ -85,7 +88,14 @@ void CollisionVolumeAABB::SetMinMax(const Vect& min, const Vect& max)
 	//Also have to update the half diagonal, center, and world matrix
 	halfDiagonal = (cornerMax - cornerMin) * 0.5f;
 	center = cornerMin + halfDiagonal;
-	world = Matrix(SCALE, cornerMax - cornerMin) * Matrix(TRANS, .5f * (cornerMin + cornerMax));
+
+	// Option 1 Multiplication
+	////world = Matrix(SCALE, cornerMax - cornerMin) * Matrix(TRANS, .5f * (cornerMin + cornerMax));
+	//world = Matrix(SCALE, cornerMax - cornerMin) * Matrix(TRANS, center);
+
+	// Option 2 Setting
+	world.set(SCALE, cornerMax - cornerMin);
+	world.set(ROW_3, center);
 }
 
 float CollisionVolumeAABB::GetBSphereRadiusFromCollisionVolume() const

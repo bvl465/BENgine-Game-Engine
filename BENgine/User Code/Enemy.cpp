@@ -12,8 +12,6 @@ Enemy::Enemy()
 {
 	pGObj_CottageLight = new GraphicsObject_TextureLight(ModelManager::GetModel("pModelCottage"), ShaderManager::GetShaderObject("pShaderObject_textureLight"), TextureManager::GetTexture("pCottageTexture"), LightColor, LightPos);
 
-
-
 	ShipScale.set(SCALE, 1.f, 1.f, 1.f);
 	ShipRotTrans = Matrix(ROT_Y, 0) * Matrix(TRANS, 0, 20, 20);
 	Matrix world = ShipScale * ShipRotTrans;
@@ -70,13 +68,6 @@ void Enemy::Update()
 void Enemy::Draw()
 {
 	pGObj_CottageLight->Render(SceneManager::GetCurrentScene()->GetCurrentCamera());
-
-	//if (BsphereToggle)
-	//{
-	//	pGObj_SpaceshipBSphere->Render(CameraManager::GetCurrentCamera());
-	//}
-
-
 }
 
 

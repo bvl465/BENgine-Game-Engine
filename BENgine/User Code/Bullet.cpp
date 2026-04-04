@@ -21,14 +21,7 @@ Bullet::Bullet()
 
 Bullet::~Bullet()
 {
-	//Updatable::SubmitUpdateDeregistration();
-	//
-	//SubmitAlarmDeregistration(AlarmableManager::ALARM_ID::ALARM_0);
-	//Drawable::SubmitDrawDeregistration();
-	//
-	//SubmitCollisionDeregistration();
 	delete pGObj_BulletLight;
-	//delete pGObj_SpaceshipBSphere;
 }
 
 void Bullet::Initialize(Matrix rotTans, BulletPool* bp)
@@ -43,9 +36,7 @@ void Bullet::Initialize(Matrix rotTans, BulletPool* bp)
 
 void Bullet::Alarm0()
 {
-	DebugMsg::out("I AM ALARM 0!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-	//Drawable::SubmitDrawDeregistration();
-	//drawRegistered = false;
+	DebugMsg::out("Bullet Lifetime Limit Reached\n");
 	alarmActive = false;
 	SubmitExit();
 }
@@ -65,14 +56,11 @@ void Bullet::Update()
 		if (collisionTrue)
 		{
 			GetCollisionVolume().DebugView(Red);
-		
 		}
 		else
 		{
 			GetCollisionVolume().DebugView(Blue);
-			
 		}
-
 	}
 	else
 	{
@@ -83,19 +71,11 @@ void Bullet::Update()
 	TerrainObject* terrain = SceneManager::GetCurrentScene()->GetTerrainManager()->GetCurrentTerrain();
 	terrain->Intersect(this);
 	collisionTrue = false;
-
 }
 
 void Bullet::Draw()
 {
 	pGObj_BulletLight->Render(SceneManager::GetCurrentScene()->GetCurrentCamera());
-
-	//if (BsphereToggle)
-	//{
-	//	pGObj_SpaceshipBSphere->Render(CameraManager::GetCurrentCamera());
-	//}
-
-
 }
 
 void Bullet::SceneEntry()

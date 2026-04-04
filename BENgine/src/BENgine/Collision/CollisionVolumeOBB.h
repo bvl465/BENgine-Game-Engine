@@ -31,37 +31,37 @@ public:
 	CollisionVolumeOBB& operator=(const CollisionVolumeOBB&) = delete;
 
 	//Returns the corner of the OBB with the smallest x, y, and z values.
-	inline const Vect& GetCornerMin() const
+	const Vect& GetCornerMin() const
 	{
 		return cornerMin;
 	};
 
 	//Returns the corner of the OBB with the largest x, y, and z values.
-	inline const Vect& GetCornerMax() const
+	const Vect& GetCornerMax() const
 	{
 		return cornerMax;
 	};
 
 	//Returns the world matrix of the OBB.
-	inline const Matrix& GetWorld() const
+	const Matrix& GetWorld() const
 	{
 		return world;
 	};
 
 	//Returns the center of the OBB.
-	inline const Vect& GetCenter() const
+	const Vect& GetCenter() const
 	{
 		return center;
 	};
 
 	//Returns the half diagonal of the OBB .5f(cornerMax - cornerMin).
-	inline const Vect& GetHalfDiagonal() const
+	const Vect& GetHalfDiagonal() const
 	{
 		return halfDiagonal;
 	};
 
 	//Returns the scale factor squared of the OBB.
-	inline const float GetScaleFactorSquared() const
+	const float GetScaleFactorSquared() const
 	{
 		return scaleFactorSquared;
 	};

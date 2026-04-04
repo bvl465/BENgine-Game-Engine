@@ -5,7 +5,6 @@
 #include "../src/BENgine/Camera/CameraManager.h"
 #include "../src/BENgine/Scene/SceneManager.h"
 #include "../src/BENgine/Scene/Scene.h"
-//#include "../src/BENgine/BENgineModels/Terrain/Terrain.h"
 WorldPlane::WorldPlane()
 {
 	pGObj_WorldPlane = new GraphicsObject_TextureFlat(ModelManager::GetModel("pModelPlane"), ShaderManager::GetShaderObject("pShaderObject_texture"), TextureManager::GetTexture("pTextPlane"));

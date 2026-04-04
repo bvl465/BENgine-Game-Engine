@@ -80,27 +80,46 @@ public:
 
 
 	//Returns the x position of the BENgineSpriteComponent in pixels on the window.
-    float GetPosX() const;
+    float GetPosX() const {
+        return posX;
+    };
 
 	//Returns the y position of the BENgineSpriteComponent in pixels on the window.
-    float GetPosY() const;
+    float GetPosY() const {
+        return posY;
+    };
 
     //Returns the BENgineSpriteComponent's angle in radians
-    float GetAngleRadians() const;
+    float GetAngleRadians() const {
+        return angle;
+    };
 
     //Computes then returns the BENgineSpriteComponent's angle in degrees and returns it
-    float GetAngleDegrees() const;
+    float GetAngleDegrees() const {
+        return angle * MATH_180_PI;
+    };
 
     //Returns the scale factor of the BENgineSpriteComponent in the x direction
-    float GetScaleX() const;
+    float GetScaleX() const
+    {
+        return scaleX;
+    };
 
     //Returns the scale factor of the BENgineSpriteComponent in the y direction
-    float GetScaleY() const;
+    float GetScaleY() const {
+        return scaleY;
+    };
 
 	////To be used once reflection methods are implemented --------------------------------------
-	float GetFlipX() const;
+	float GetFlipX() const
+    {
+        return flipX;
+    };
     
-	float GetFlipY() const;
+	float GetFlipY() const
+    {
+        return flipY;
+    };
 	////-----------------------------------------------------------------------------------------
 
 	//Calculates then returns the matrix that results from multiplying the scale matrix, rotation matrix, and translation matrix of the BENgineSpriteComponent together in that order.

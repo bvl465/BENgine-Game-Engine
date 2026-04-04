@@ -38,8 +38,10 @@ public:
 
     
     //Returns the number of frames in the animation
-    int GetNumFrames() const;
-
+    int GetNumFrames() const {
+        return numFrames;
+    };
+    
 	//Gets the frame info at the specified index of the animation.
     //Parameters:
 	//index - The index of the frame info to retrieve. Must be between 0 and GetNumFrames() - 1.

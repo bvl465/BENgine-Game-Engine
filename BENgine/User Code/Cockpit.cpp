@@ -5,6 +5,8 @@
 #include "../src/BENgine/Scene/SceneManager.h"
 #include "../src/BENgine/Sprite/BENgineSpriteAnimation.h"
 #include "../src/BENgine/Math Tools/BENgineMathTools.h"
+
+#include "../src/BENgine/BENgine.h"
 Cockpit::Cockpit() : posX(.5f * (float)(BENgine::GetWidth())), posY(.5f * (float)(BENgine::GetHeight()))
 {
 	cockpitDamage = new BENgineSpriteAnimation({

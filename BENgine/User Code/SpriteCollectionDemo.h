@@ -2,11 +2,6 @@
 #ifndef _SpriteCollectionDemo
 #define _SpriteCollectionDemo
 #include "../src/BENgine/Game Object/GameObject.h"
-#include "../src/BENgine/Asset Managers/Model Manager/ModelManager.h"
-#include "../src/BENgine/Asset Managers/Texture Manager/TextureManager.h"
-#include "../src/BENgine/Asset Managers/Shader Manager/ShaderManager.h"
-
-#include "../src/BENgine/BENgine.h"
 class BENgineSprite;
 class BENgineSpriteCollection;
 class BENgineAnimatedSprite;

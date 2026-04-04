@@ -28,19 +28,19 @@ public:
 	virtual void DebugView(const Vect& color) const override;
 
 	//Returns the center of the Bounding Sphere.
-	inline const Vect& GetCenter() const
+	const Vect& GetCenter() const
 	{
 		return center;
 	};
 
 	//Returns the radius of the Bounding Sphere.
-	inline float GetRadius() const
+	float GetRadius() const
 	{
 		return radius;
 	};
 
 	//Returns the radius squared of the Bounding Sphere.
-	inline float GetRadiusSquared() const
+	float GetRadiusSquared() const
 	{
 		return radius * radius;
 	};

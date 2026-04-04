@@ -42,10 +42,13 @@ BENgineSpriteAnimation::BENgineSpriteAnimation(std::list<std::pair<std::string, 
 	}
 }
 
-int BENgineSpriteAnimation::GetNumFrames() const
-{
-	return numFrames;
-}
+
+// NOW INLINE FUNCTIONS
+
+//int BENgineSpriteAnimation::GetNumFrames() const
+//{
+//	return numFrames;
+//}
 
 BENgineSpriteAnimation::FrameInfo* BENgineSpriteAnimation::GetFrameInfo(int index) const
 {

@@ -2,8 +2,6 @@
 #ifndef _Frigate
 #define _Frigate
 #include "../src/BENgine/Game Object/GameObject.h"
-
-#include "../src/BENgine/BENgine.h"
 class SpriteFont;
 class BulletPool;
 class Enemy;
@@ -44,7 +42,6 @@ private:
 	const float ShipRotAng = .05f;
 	bool collisionTrue = false;
 	bool drawRegistered = true;
-	bool BsphereToggle = false;
 	bool ignoreKeyPress = false;
 	BulletPool* pBulletPool = nullptr;
 	SpriteFont* pSpriteFont = nullptr;
