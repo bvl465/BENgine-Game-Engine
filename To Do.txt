@@ -4,7 +4,7 @@ TODO
 
 Make an attorney to delete SpriteFonts
 
-Fix the issues that come from changing the alignment of text where the glyphs get flipped. Maybe make sprite strings derive from sprite collections and have the glyphs be the sprite components.
+Maybe make sprite strings derive from sprite collections and have the glyphs be the sprite components.
 
 Create Doxygen documentation
 
