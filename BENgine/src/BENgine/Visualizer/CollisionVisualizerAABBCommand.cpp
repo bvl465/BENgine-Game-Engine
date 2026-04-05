@@ -4,7 +4,9 @@
 void CollisionVisualizerAABBCommand::Execute()
 {
 
-	Matrix world = Matrix(SCALE, max - min) * Matrix(TRANS, .5f * (min + max));
+	//Matrix world = Matrix(SCALE, max - min) * Matrix(TRANS, .5f * (min + max));
+	Matrix world = Matrix(SCALE, max - min);
+	world.set(ROW_3, .5f * (min + max));
 
 	VisualizerAttorney::AABBCommands::RenderAABB(world, color);
 }

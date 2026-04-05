@@ -2,7 +2,10 @@
 #include "VisualizerAttorney.h"
 void CollisionVisualizerOBBCommand::Execute()
 {
-	Matrix renderMatrix = Matrix(SCALE, max - min) * Matrix(TRANS, .5f * (min + max)) * world;
+	//Matrix renderMatrix = Matrix(SCALE, max - min) * Matrix(TRANS, .5f * (min + max)) * world;
+	Matrix renderMatrix = Matrix(SCALE, max - min);
+	renderMatrix.set(ROW_3, .5f * (min + max));
+	renderMatrix *= world;
 
 	VisualizerAttorney::OBBCommands::RenderOBB(renderMatrix, color);
 }

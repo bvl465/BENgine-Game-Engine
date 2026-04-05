@@ -19,20 +19,6 @@ public:
 
 
 
-	////pre optimization that saves a whopping 4 bytes at the expense of the users sanity
-	////I can implement this later.
-	//enum StringOrientation { 
-	//	LeftJustifiedAbsolutePosition,
-	//	RightJustificationAbsolutePosition,
-	//	CenteredAbsolutePosition,
-	//
-	//	LeftJustifiedRelativePosition,
-	//	RightJustificationRelativePosition,
-	//	CenteredRelativePosition
-	//};
-
-
-
 	enum Alignment
 	{
 		Left,
@@ -44,11 +30,6 @@ public:
 		Radians
 	};
 
-	enum ScaleType {
-		ScaleFactor,
-		ScalePixel
-	};
-
 	enum PositionType {
 		Absolute,
 		Relative
@@ -57,7 +38,6 @@ public:
 
 
 	SpriteString(std::string fontKey, std::string message, PositionType positionType, float x, float y, Alignment messageAlignment);
-	//SpriteString(std::string fontKey, std::string message, Alignment messageAlignment, PositionType positionType, float x, float y, AngleUnit angleUnit, float angle, ScaleType scaleType, float scaleWidth, float scaleHeight);
 
 
 
@@ -105,8 +85,6 @@ private:
 	//StringOrientation orientation; //Defines the texts alignment and how position is defined by the text.
 
 	Alignment alignment; //Defines the texts alignment
-
-	//PositionType positionType; //Defines how the text is positioned
 
 	//float scaleX; //The scale of the text in the x direction
 	//float scaleY; //The scale of the text in the y direction

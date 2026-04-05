@@ -25,44 +25,64 @@ SpriteString::SpriteString(std::string fontKey, std::string message, PositionTyp
 	int messageLength = message.length();
 
 	Glyph* glyph;
-	if (alignment == Alignment::Left) {
+	for (int i = 0; i < messageLength; i++)
+	{
+		glyph = font->GetGlyph(message.at(i));
+		glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
+		text.push_back(glyph);
+		nextX += glyph->GetWidth(); // add cell width for left alignment
 
-		for (int i = 0; i < messageLength; i++)
-		{
-			glyph = font->GetGlyph(message.at(i));
-			glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
-			text.push_front(glyph);
-			nextX += glyph->GetWidth(); // add cell width for left alignment
-
-			// we must update the next position ourselves
-		}
-		width = nextX - posX; // set the width of the string
-
-		if (text.size() > 0) {
-			height = text.front()->GetHeight();
-		}
-		else {
-			height = 0.f;
-		}
+		// we must update the next position ourselves
 	}
-	else{
-		messageLength -= 1;
-		for (int i = messageLength; i >= 0; i--) //start from the end of the string when using right alignment
-		{
-			glyph = font->GetGlyph(message.at(i));
-			nextX -= glyph->GetWidth();
-			glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
-			text.push_front(glyph);
-		}
-		width = posX - nextX; // set the width of the string
+	width = nextX - posX; // set the width of the string
 
-		if (text.size() > 0) {
-			height = text.front()->GetHeight();
-		}
-		else {
-			height = 0.f;
-		}
+	if (text.size() > 0) {
+		height = text.front()->GetHeight();
 	}
+	else {
+		height = 0.f;
+	}
+	
+	
+	//if (alignment == Alignment::Left) {
+	//
+	//	for (int i = 0; i < messageLength; i++)
+	//	{
+	//		glyph = font->GetGlyph(message.at(i));
+	//		glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
+	//		text.push_front(glyph);
+	//		nextX += glyph->GetWidth(); // add cell width for left alignment
+	//
+	//		// we must update the next position ourselves
+	//	}
+	//	width = nextX - posX; // set the width of the string
+	//
+	//	if (text.size() > 0) {
+	//		height = text.front()->GetHeight();
+	//	}
+	//	else {
+	//		height = 0.f;
+	//	}
+	//}
+	//else{
+	//	messageLength -= 1;
+	//	for (int i = messageLength; i >= 0; i--) //start from the end of the string when using right alignment
+	//	{
+	//		glyph = font->GetGlyph(message.at(i));
+	//		nextX -= glyph->GetWidth();
+	//		glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
+	//		text.push_front(glyph);
+	//	}
+	//	width = posX - nextX; // set the width of the string
+	//
+	//	if (text.size() > 0) {
+	//		height = text.front()->GetHeight();
+	//	}
+	//	else {
+	//		height = 0.f;
+	//	}
+	//}
+	// 
 	//else if (alignment == Right) {
 	//	messageLength -= 1;
 	//	for (int i = messageLength; i >= 0; i--) //start from the end of the string when using right alignment
@@ -81,11 +101,6 @@ SpriteString::SpriteString(std::string fontKey, std::string message, PositionTyp
 	//	width = 0.f;
 	//}
 }
-
-//SpriteString::SpriteString(std::string fontKey, std::string message, Alignment messageAlignment, PositionType positionType, float x, float y, AngleUnit angleUnit, float angle, ScaleType scaleType, float scaleWidth, float scaleHeight)
-//{
-//	
-//}
 
 
 void SpriteString::SetPositionRelative(const float x, const float y)
@@ -127,7 +142,7 @@ void SpriteString::SetPositionRelative(const float x, const float y)
 	const float transY = (BENgine::GetHeight() * y) - posY;
 	GlyphCollection::iterator it;
 	for (it = text.begin(); it != text.end(); it++) {
-		(*it)->TransformPositionAbsolute(transX, transY); //call draw on all the glyphs in the list of glyphs
+		(*it)->TransformPositionAbsolute(transX, transY);
 	}
 	posX = BENgine::GetWidth() * x;
 	posY = BENgine::GetHeight() * y;
@@ -137,7 +152,7 @@ void SpriteString::TransformPositionRelative(const float x, const float y)
 {
 	GlyphCollection::iterator it;
 	for (it = text.begin(); it != text.end(); it++) {
-		(*it)->TransformPositionRelative(x, y); //call draw on all the glyphs in the list of glyphs
+		(*it)->TransformPositionRelative(x, y);
 	}
 	posX += x * BENgine::GetWidth();
 	posY += y * BENgine::GetHeight();
@@ -187,7 +202,7 @@ void SpriteString::SetPositionAbsolute(const float x, const float y)
 	const float transY = y - posY;
 	GlyphCollection::iterator it;
 	for (it = text.begin(); it != text.end(); it++) {
-		(*it)->TransformPositionAbsolute(transX, transY); //call draw on all the glyphs in the list of glyphs
+		(*it)->TransformPositionAbsolute(transX, transY);
 	}
 	posX = x;
 	posY = y;
@@ -198,7 +213,7 @@ void SpriteString::TransformPositionAbsolute(const float x, const float y)
 {
 	GlyphCollection::iterator it;
 	for (it = text.begin(); it != text.end(); it++) {
-		(*it)->TransformPositionAbsolute(x, y); //call draw on all the glyphs in the list of glyphs
+		(*it)->TransformPositionAbsolute(x, y);
 	}
 	posX += x;
 	posY += y;
@@ -213,30 +228,42 @@ void SpriteString::ChangeString(std::string newMessage)
 	int messageLength = newMessage.length();
 	text.clear(); // Clear the current text before changing the string
 	Glyph* glyph;
-	if (alignment == Alignment::Left) {
 
-		for (int i = 0; i < messageLength; i++)
-		{
-			glyph = font->GetGlyph(newMessage.at(i));
-			glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
-			text.push_front(glyph);
-			nextX += glyph->GetWidth(); // add cell width for left alignment
+	for (int i = 0; i < messageLength; i++)
+	{
+		glyph = font->GetGlyph(newMessage.at(i));
+		glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
+		text.push_back(glyph);
+		nextX += glyph->GetWidth(); // add cell width for left alignment
 
-			// we must update the next position ourselves
-		}
-		width = nextX - posX; // set the width of the string
+		// we must update the next position ourselves
 	}
-	else if (alignment == Right) {
-		messageLength -= 1;
-		for (int i = messageLength; i >= 0; i--) //start from the end of the string when using right alignment
-		{
-			glyph = font->GetGlyph(newMessage.at(i));
-			nextX -= glyph->GetWidth();
-			glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
-			text.push_front(glyph);
-		}
-		width = posX - nextX; // set the width of the string
-	}
+	width = nextX - posX; // set the width of the string
+
+	//if (alignment == Alignment::Left) {
+	//
+	//	for (int i = 0; i < messageLength; i++)
+	//	{
+	//		glyph = font->GetGlyph(newMessage.at(i));
+	//		glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
+	//		text.push_front(glyph);
+	//		nextX += glyph->GetWidth(); // add cell width for left alignment
+	//
+	//		// we must update the next position ourselves
+	//	}
+	//	width = nextX - posX; // set the width of the string
+	//}
+	//else if (alignment == Right) {
+	//	messageLength -= 1;
+	//	for (int i = messageLength; i >= 0; i--) //start from the end of the string when using right alignment
+	//	{
+	//		glyph = font->GetGlyph(newMessage.at(i));
+	//		nextX -= glyph->GetWidth();
+	//		glyph->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
+	//		text.push_front(glyph);
+	//	}
+	//	width = posX - nextX; // set the width of the string
+	//}
 
 }
 
@@ -284,9 +311,21 @@ void SpriteString::Render(Camera* camera)
 	float nextY = posY;
 	int textLength = text.size();
 	auto it = text.begin();
+
 	switch (alignment) {
 	case Alignment::Right:
 
+		for (int i = 0; i < textLength; i++)
+		{
+			(*it)->SetPositionAbsolute(nextX - width, nextY); // set the position of the glyph
+			(*it)->Render(camera);
+			nextX += (*it)->GetWidth(); // add cell width for left alignment
+			++it; // Move to the next glyph
+
+		}
+		break;
+	case Alignment::Left:
+		//it = text.end(); // Start from the end of the list
 		for (int i = 0; i < textLength; i++)
 		{
 			(*it)->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
@@ -296,22 +335,42 @@ void SpriteString::Render(Camera* camera)
 
 		}
 		break;
-	case Alignment::Left:
-		//it = text.end(); // Start from the end of the list
-		textLength -= 1;
-		for (int i = textLength; i >= 0; i--) //start from the end of the string when using right alignment
-		{
-			
-			nextX -= (*it)->GetWidth();
-			(*it)->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
-			(*it)->Render(camera);
-			++it;
-		}
-		break;
 		//case Alignment::Center:
 		//
 		//	break;
 	}
+
+
+	//switch (alignment) {
+	//case Alignment::Right:
+	//
+	//	for (int i = 0; i < textLength; i++)
+	//	{
+	//		(*it)->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
+	//		(*it)->Render(camera);
+	//		nextX += (*it)->GetWidth(); // add cell width for left alignment
+	//		++it; // Move to the next glyph
+	//
+	//	}
+	//	break;
+	//case Alignment::Left:
+	//	//it = text.end(); // Start from the end of the list
+	//	textLength -= 1;
+	//	for (int i = textLength; i >= 0; i--) //start from the end of the string when using right alignment
+	//	{
+	//		
+	//		nextX -= (*it)->GetWidth();
+	//		(*it)->SetPositionAbsolute(nextX, nextY); // set the position of the glyph
+	//		(*it)->Render(camera);
+	//		++it;
+	//	}
+	//	break;
+	//	//case Alignment::Center:
+	//	//
+	//	//	break;
+	//}
+
+
 	//Glyph* glyph;
 	//float nextX = posX;
 	//float nextY = posY;

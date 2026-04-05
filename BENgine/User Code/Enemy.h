@@ -16,8 +16,8 @@ public:
 	Enemy(const Enemy&) = delete;
 	Enemy& operator=(const Enemy&) = delete;
 	~Enemy();
-	virtual void Update();
-	virtual void Draw();
+	virtual void Update() override;
+	virtual void Draw() override;
 
 	void SetWorld(Matrix world);
 	void Collision(Frigate*);//{// DebugMsg::out("Collision with frigate \n"); }

@@ -19,11 +19,6 @@ Sprite2DLayer::Sprite2DLayer(std::string name) : layerName(name)
 	
 }
 
-std::string Sprite2DLayer::GetLayerName() const
-{
-	return std::string();
-}
-
 void Sprite2DLayer::ProcessDrawMap(Camera* cam)
 {
 	for (auto it = drawMap.begin(); it != drawMap.end(); ++it)
@@ -57,3 +52,10 @@ void Sprite2DLayer::ChangePriority(DrawMapStorageEntryRef entryRef, const int ne
 		BENgineSpriteBaseAttorney::Layer::SetDrawMapStorageEntryRef(sprite, drawMap.insert(std::pair<int, BENgineSpriteBase*>(newPriority, sprite)));
 	}
 }
+
+// NOW INLINE
+
+//std::string Sprite2DLayer::GetLayerName() const
+//{
+//	return std::string();
+//}

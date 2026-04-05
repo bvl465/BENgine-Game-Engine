@@ -27,7 +27,10 @@ public:
 	Sprite2DLayer(std::string name);	
 
 	//Returns the name of the layer.
-	std::string GetLayerName() const;
+	std::string GetLayerName() const
+	{
+		return std::string();
+	};
 
 	using DrawMapStorageEntryRef = DrawMap::iterator;
 

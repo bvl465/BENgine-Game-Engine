@@ -6,8 +6,6 @@
 #include "SceneNullStrategy.h"
 #include "SceneChangeStrategy.h"
 SceneManager* SceneManager::ptrInstance = nullptr;
-//Scene* SceneManager::curScene = nullptr;
-//const std::string SceneManager::defaultPath = "..\\Assets\\Scenes";
 
 void SceneManager::Delete()
 {
@@ -67,18 +65,11 @@ void SceneManager::SetNextScene(Scene* scene)
 	Instance().privSetNextScene(scene);
 }
 
-//void SceneManager::SetStartScene(Scene* start)
-//{
-//	Instance().privSetStartScene(start);
-//}
 Scene* SceneManager::GetCurrentScene()
 {
 	return Instance().privGetCurrentScene();
 }
-//void SceneManager::InitStartScene()
-//{
-//	//Instance().privInitStartScene();
-//}
+
 void SceneManager::Update()
 {
 	Instance().privUpdate();
@@ -87,21 +78,12 @@ void SceneManager::Draw()
 {
 	Instance().privDraw();
 }
-//void SceneManager::privSetStartScene(Scene* start)
-//{
-//	ptrInstance->privSetNextScene(start);
-//	//curScene = start;
-//}
 
 Scene* SceneManager::privGetCurrentScene()
 {
 	return curScene;
 }
 
-//void SceneManager::privInitStartScene()
-//{
-//	SceneAttorney::GameLoop::Initialize(curScene);
-//}
 
 void SceneManager::privUpdate()
 {

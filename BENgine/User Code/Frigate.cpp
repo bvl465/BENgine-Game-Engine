@@ -21,8 +21,6 @@ Frigate::Frigate()
 
 	pGObj_SpaceFrigateLight = new GraphicsObject_TextureLight(ModelManager::GetModel("pModelXWing"), ShaderManager::GetShaderObject("pShaderObject_textureLight"), TextureManager::GetTexture("pXWingTexture"), LightColor, LightPos);
 
-
-
 	ShipScale.set(SCALE, 1.f, 1.f, 1.f);
 	ShipRotTrans = Matrix(ROT_Y, 0) * Matrix(TRANS, 0, 20, 0);
 	Matrix world = ShipScale * ShipRotTrans;
@@ -55,7 +53,7 @@ Frigate::Frigate()
 
 	pSpriteFont = SpriteFontManager::GetSpriteFont("pCourierNew");
 
-	pSpriteString = new SpriteString("pCourierNew", message, SpriteString::PositionType::Absolute, 300.f, 300.f, SpriteString::Alignment::Left);
+	pSpriteString = new SpriteString("pCourierNew", message, SpriteString::PositionType::Absolute, 300.f, 300.f, SpriteString::Alignment::Right);
 
 }
 
@@ -86,9 +84,6 @@ Frigate::~Frigate()
 
 void Frigate::Alarm0()
 {
-	//DebugMsg::out("I AM ALARM 0!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-	//Drawable::SubmitDrawDeregistration();
-	//drawRegistered = false;
 	SubmitAlarmRegistration(AlarmableManager::ALARM_ID::ALARM_2, 5.f);
 }
 
@@ -101,8 +96,6 @@ void Frigate::Alarm1()
 
 void Frigate::Alarm2()
 {
-	//Drawable::SubmitDrawRegistration();
-	//drawRegistered = true;
 	//DebugMsg::out("I AM ALARM 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
 	SubmitAlarmRegistration(AlarmableManager::ALARM_ID::ALARM_0, 5.f);
 }
