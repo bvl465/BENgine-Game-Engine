@@ -2,10 +2,7 @@
 KNOWN ISSUES
 ===========================
 
-Sprite Strings: Switching alignments will cause the text to appear in reverse order until the message is modified and then the text will be displayed as intended.
-
-TerrainObject: The XWing shakes a bit when moving across the terrain at slow speeds. GetTerrainNormal() needs to be adjusted to prevent this
-
+SpriteString contains scaffolding code.
 
 See To Do.txt for more
 
