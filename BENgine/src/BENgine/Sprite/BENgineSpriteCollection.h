@@ -45,7 +45,7 @@ public:
     
     virtual void ReflectOverLocalYAxis() override;
     
-    virtual void ReflectOverNormalizedVectorFromPoint(Vect vector, float pointX, float pointY, FlipType flipType) override;
+    virtual void ReflectOverNormalizedVectorFromPoint(const Vect& vector, float pointX, float pointY, FlipType flipType) override;
 
 
 

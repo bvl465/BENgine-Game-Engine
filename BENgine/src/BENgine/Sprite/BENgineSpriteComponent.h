@@ -68,7 +68,7 @@ public:
     
 	virtual void ReflectOverLocalYAxis() = 0;
     
-    virtual void ReflectOverNormalizedVectorFromPoint(Vect vector, float pointX, float pointY, FlipType flipType) = 0;
+    virtual void ReflectOverNormalizedVectorFromPoint(const Vect& vector, float pointX, float pointY, FlipType flipType) = 0;
 
 
 	virtual void RotateByRadians(const float radians) = 0;

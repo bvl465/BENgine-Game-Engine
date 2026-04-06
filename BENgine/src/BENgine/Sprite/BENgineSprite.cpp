@@ -179,20 +179,21 @@ void BENgineSprite::TransformPositionAbsolute(const float x, const float y)
 
 void BENgineSprite::RotateAboutAbsolutePointRadians(const float x, const float y, const float radians)
 {
-	//Matrix curWorld = (ptrGOSprite->getWorld());
-	//Matrix temp = scale * rot * trans * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * rot * Matrix(TRANS, posX, posY, 0.f) * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
+	const float cosRad = cosf(radians);
+	const float sinRad = sinf(radians);
+	
+	//Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
+	const Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(Vect(cosRad, sinRad, 0.f, 0.f), Vect(-sinRad, cosRad, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, x, y, 0.f));
 	posX = temp.M12();
 	posY = temp.M13();
-	//trans.set(TRANS, posX, posY, 0.f);
 	angle += radians;
-	//rot.set(ROT_Z, angle);
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
-	//Matrix world = offset * scale * rot * trans;
-	//ptrGOSprite->SetWorld(world);
+	//cosAngle = cosf(angle);
+	//sinAngle = sinf(angle);
+
+	const float prevCosAngle = cosAngle;
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
+
 	if (updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM || updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM_AND_RENDER) {
 		UpdateWorld();
 	}
@@ -200,20 +201,21 @@ void BENgineSprite::RotateAboutAbsolutePointRadians(const float x, const float y
 
 void BENgineSprite::RotateAboutAbsolutePointDegrees(const float x, const float y, const float degrees)
 {
-	float radians = degrees * MATH_PI_180;
-	//Matrix temp = scale * rot * trans * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * rot * Matrix(TRANS, posX, posY, 0.f) * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
+	const float radians = degrees * MATH_PI_180;
+	
+	const float cosRad = cosf(radians);
+	const float sinRad = sinf(radians);
+
+	//Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
+	const Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(Vect(cosRad, sinRad, 0.f, 0.f), Vect(-sinRad, cosRad, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, x, y, 0.f));
 	posX = temp.M12();
 	posY = temp.M13();
-	//trans.set(TRANS, posX, posY, 0.f);
 	angle += radians;
-	//rot.set(ROT_Z, angle);
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
-	//Matrix world = offset * scale * rot * trans;
-	//ptrGOSprite->SetWorld(world);
+
+	const float prevCosAngle = cosAngle;
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
+
 	if (updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM || updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM_AND_RENDER) {
 		UpdateWorld();
 	}
@@ -223,19 +225,22 @@ void BENgineSprite::RotateAboutRelativePointRadians(float x, float y, const floa
 {
 	x *= BENgine::GetWidth();
 	y *= BENgine::GetHeight();
-	//Matrix temp = scale * rot * trans * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * rot * Matrix(TRANS, posX, posY, 0.f) * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
+	
+	const float cosRad = cosf(radians);
+	const float sinRad = sinf(radians);
+
+	//Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
+	const Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(Vect(cosRad, sinRad, 0.f, 0.f), Vect(-sinRad, cosRad, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, x, y, 0.f));
 	posX = temp.M12();
 	posY = temp.M13();
-	//trans.set(TRANS, posX, posY, 0.f);
 	angle += radians;
-	//rot.set(ROT_Z, angle);
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
-	//Matrix world = offset * scale * rot * trans;
-	//ptrGOSprite->SetWorld(world);
+	//cosAngle = cosf(angle);
+	//sinAngle = sinf(angle);
+
+	const float prevCosAngle = cosAngle;
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
+
 	if (updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM || updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM_AND_RENDER) {
 		UpdateWorld();
 	}
@@ -245,19 +250,22 @@ void BENgineSprite::RotateAboutRelativePointDegrees(float x, float y, const floa
 {
 	x *= BENgine::GetWidth();
 	y *= BENgine::GetHeight();
-	float radians = degrees * MATH_PI_180;
-	//Matrix temp = scale * rot * trans * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * rot * Matrix(TRANS, posX, posY, 0.f) * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
-	Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
+	const float radians = degrees * MATH_PI_180;
+	
+	const float cosRad = cosf(radians);
+	const float sinRad = sinf(radians);
+
+	//Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
+	const Matrix temp = GetSRTMatrix() * (Matrix(TRANS, -x, -y, 0.f) * Matrix(Vect(cosRad, sinRad, 0.f, 0.f), Vect(-sinRad, cosRad, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, x, y, 0.f));
 	posX = temp.M12();
 	posY = temp.M13();
-	//trans.set(TRANS, posX, posY, 0.f);
 	angle += radians;
-	//rot.set(ROT_Z, angle);
-	
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
+	//cosAngle = cosf(angle);
+	//sinAngle = sinf(angle);
+
+	const float prevCosAngle = cosAngle;
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
 
 	if (updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM || updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM_AND_RENDER) {
 		UpdateWorld();
@@ -280,22 +288,18 @@ void BENgineSprite::SetScaleRotationTranslation(const float sx, const float sy, 
 
 void BENgineSprite::RotateByRadiansUsingMatrixAboutPoint(const float radians, const Matrix& rotationAndTranslationMatrix)
 {
-	//Matrix temp = scale * rot * trans * rotationAndTranslationMatrix;
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * rot * Matrix(TRANS, posX, posY, 0.f) * rotationAndTranslationMatrix;
-	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * rotationAndTranslationMatrix;
-	//Matrix temp = Matrix(SCALE, scaleX * flipX, scaleY * flipY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * rotationAndTranslationMatrix;
-	Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
+	const Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
 	posX = temp.M12();
 	posY = temp.M13();
 	//trans.set(TRANS, posX, posY, 0.f);
 	angle += radians;
 	//rot.set(ROT_Z, angle);
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
-	//Matrix rotTest = Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f));
-	//Matrix world = offset * scale * rot * trans;
-	//ptrGOSprite->SetWorld(world);
-	//rot = rotTest;
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
 	if (updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM || updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM_AND_RENDER) {
 		UpdateWorld();
 	}
@@ -320,11 +324,6 @@ void BENgineSprite::SetAutoUpdateWorldSetting(SpriteAutoUpdateWorldSetting setti
 void BENgineSprite::ReflectOverLocalXAxis()
 {
 	flipX *= -1.f;
-	//if (sinAngle != 0.f || cosAngle != 0.f) {
-	//	angle = atan2f(-sinAngle, cosAngle);
-	//	cosAngle = cosAngle;
-	//	sinAngle = -sinAngle;
-	//}
 	if (updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM || updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM_AND_RENDER) {
 		UpdateWorld();
 	}
@@ -333,18 +332,12 @@ void BENgineSprite::ReflectOverLocalXAxis()
 void BENgineSprite::ReflectOverLocalYAxis()
 {
 	flipY *= -1.f;
-	//if (sinAngle != 0.f || cosAngle != 0.f) {
-	//	
-	//	//angle = atan2f(sinAngle, -cosAngle);
-	//	//cosAngle = -cosAngle;
-	//	//sinAngle = sinAngle;
-	//}
 	if (updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM || updateWorldSetting == SpriteAutoUpdateWorldSetting::ON_TRANSFORM_AND_RENDER) {
 		UpdateWorld();
 	}
 }
 
-void BENgineSprite::ReflectOverNormalizedVectorFromPoint(Vect vector, float pointX, float pointY, FlipType flipType)
+void BENgineSprite::ReflectOverNormalizedVectorFromPoint(const Vect& vector, float pointX, float pointY, FlipType flipType)
 {
 
 	Vect angleVector;
@@ -364,14 +357,14 @@ void BENgineSprite::ReflectOverNormalizedVectorFromPoint(Vect vector, float poin
 
 	}
 
-	Vect posToPoint =  (Vect(pointX, pointY, 0.f) - Vect(posX, posY, 0.f));
-	Vect projection = (posToPoint.dot(vector)) * vector;
-	Vect reflectedPosToPoint = posToPoint - projection - projection;
+	const Vect posToPoint =  (Vect(pointX, pointY, 0.f) - Vect(posX, posY, 0.f));
+	const Vect projection = (posToPoint.dot(vector)) * vector;
+	const Vect reflectedPosToPoint = posToPoint - projection - projection;
 	posX = reflectedPosToPoint.X() + pointX;
 	posY = reflectedPosToPoint.Y() + pointY;
 
-	Vect projectionAngle = (angleVector.dot(vector)) * vector;
-	Vect reflectedAngleVector = angleVector - projectionAngle - projectionAngle;
+	const Vect projectionAngle = (angleVector.dot(vector)) * vector;
+	const Vect reflectedAngleVector = angleVector - projectionAngle - projectionAngle;
 	cosAngle = reflectedAngleVector.X();
 	sinAngle = reflectedAngleVector.Y();
 

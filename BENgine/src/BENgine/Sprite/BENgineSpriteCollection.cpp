@@ -65,9 +65,14 @@ void BENgineSpriteCollection::RotateByRadiansUsingMatrixAboutPoint(const float r
 	Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
 	posX = temp.M12();
 	posY = temp.M13();
+
 	angle += radians;
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
+
 	for (auto& spriteComponent : spriteComponentList)
 	{
 		spriteComponent->RotateByRadiansUsingMatrixAboutPoint(radians, rotationAndTranslationMatrix);
@@ -97,11 +102,22 @@ void BENgineSpriteCollection::SetDataWithoutTransform(const float px, const floa
 
 void BENgineSpriteCollection::RotateByRadians(const float radians)
 {
+	//angle += radians;
+	//cosAngle = cosf(angle);
+	//sinAngle = sinf(angle);
+	//Matrix rotationMatrix = Matrix(ROT_Z, radians);
+	//const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * rotationMatrix * Matrix(TRANS, posX, posY, 0.f));
+
+	const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, posX, posY, 0.f));
 	angle += radians;
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
-	Matrix rotationMatrix = Matrix(ROT_Z, radians);
-	Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * rotationMatrix * Matrix(TRANS, posX, posY, 0.f));
+
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
+
+
 	for (auto& spriteComponent : spriteComponentList)
 	{
 		spriteComponent->RotateByRadiansUsingMatrixAboutPoint(radians, rotationAndTranslationMatrix);
@@ -111,12 +127,23 @@ void BENgineSpriteCollection::RotateByRadians(const float radians)
 
 void BENgineSpriteCollection::RotateByDegrees(const float degrees)
 {
+	//const float radians = degrees * MATH_PI_180;
+	//angle += radians;
+	//cosAngle = cosf(angle);
+	//sinAngle = sinf(angle);
+	//Matrix rotationMatrix = Matrix(ROT_Z, radians);
+	//const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * rotationMatrix * Matrix(TRANS, posX, posY, 0.f));
+
+
 	const float radians = degrees * MATH_PI_180;
+	const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, posX, posY, 0.f));
 	angle += radians;
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
-	Matrix rotationMatrix = Matrix(ROT_Z, radians);
-	Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * rotationMatrix * Matrix(TRANS, posX, posY, 0.f));
+
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
 	for (auto& spriteComponent : spriteComponentList)
 	{
 		spriteComponent->RotateByRadiansUsingMatrixAboutPoint(radians, rotationAndTranslationMatrix);
@@ -126,13 +153,24 @@ void BENgineSpriteCollection::RotateByDegrees(const float degrees)
 
 void BENgineSpriteCollection::SetAngleDegrees(const float degrees)
 {
+	//const float radians = degrees * MATH_PI_180;
+	//const float rotateBy = radians - angle;
+	//angle = radians;
+	//cosAngle = cosf(angle);
+	//sinAngle = sinf(angle);
+	//Matrix rotationMatrix = Matrix(ROT_Z, rotateBy);
+	//const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * rotationMatrix * Matrix(TRANS, posX, posY, 0.f));
+
+
 	const float radians = degrees * MATH_PI_180;
 	const float rotateBy = radians - angle;
+	const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * Matrix(ROT_Z, rotateBy) * Matrix(TRANS, posX, posY, 0.f));
 	angle = radians;
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
-	Matrix rotationMatrix = Matrix(ROT_Z, rotateBy);
-	Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * rotationMatrix * Matrix(TRANS, posX, posY, 0.f));
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
 	for (auto& spriteComponent : spriteComponentList)
 	{
 		spriteComponent->RotateByRadiansUsingMatrixAboutPoint(rotateBy, rotationAndTranslationMatrix);
@@ -142,12 +180,22 @@ void BENgineSpriteCollection::SetAngleDegrees(const float degrees)
 void BENgineSpriteCollection::SetAngleRadians(const float radians)
 {
 
+	//const float rotateBy = radians - angle;
+	//angle = radians;
+	//cosAngle = cosf(angle);
+	//sinAngle = sinf(angle);
+	//Matrix rotationMatrix = Matrix(ROT_Z, rotateBy);
+	//const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * rotationMatrix * Matrix(TRANS, posX, posY, 0.f));
+	
 	const float rotateBy = radians - angle;
+	const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * Matrix(ROT_Z, rotateBy) * Matrix(TRANS, posX, posY, 0.f));
 	angle = radians;
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
-	Matrix rotationMatrix = Matrix(ROT_Z, rotateBy);
-	Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -posX, -posY, 0.f) * rotationMatrix * Matrix(TRANS, posX, posY, 0.f));
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
+	
 	for (auto& spriteComponent : spriteComponentList)
 	{
 		spriteComponent->RotateByRadiansUsingMatrixAboutPoint(rotateBy, rotationAndTranslationMatrix);
@@ -191,7 +239,7 @@ void BENgineSpriteCollection::ReflectOverLocalYAxis()
 	}
 }
 
-void BENgineSpriteCollection::ReflectOverNormalizedVectorFromPoint(Vect vector, float pointX, float pointY, FlipType flipType)
+void BENgineSpriteCollection::ReflectOverNormalizedVectorFromPoint(const Vect& vector, float pointX, float pointY, FlipType flipType)
 {
 
 	Vect angleVector;
@@ -210,15 +258,15 @@ void BENgineSpriteCollection::ReflectOverNormalizedVectorFromPoint(Vect vector, 
 		angleVector = Vect(cosAngle, sinAngle, 0.f);
 	}
 
-	Vect posToPoint = (Vect(pointX, pointY, 0.f) - Vect(posX, posY, 0.f));
-	Vect projection = (posToPoint.dot(vector)) * vector;
-	Vect reflectedPosToPoint = posToPoint - projection - projection;
+	const Vect posToPoint = (Vect(pointX, pointY, 0.f) - Vect(posX, posY, 0.f));
+	const Vect projection = (posToPoint.dot(vector)) * vector;
+	const Vect reflectedPosToPoint = posToPoint - projection - projection;
 	posX = reflectedPosToPoint.X() + pointX;
 	posY = reflectedPosToPoint.Y() + pointY;
 
 	//Vect angleVector = Vect(cosAngle, sinAngle, 0.f);
-	Vect projectionAngle = (angleVector.dot(vector)) * vector;
-	Vect reflectedAngleVector = angleVector - projectionAngle - projectionAngle;
+	const Vect projectionAngle = (angleVector.dot(vector)) * vector;
+	const Vect reflectedAngleVector = angleVector - projectionAngle - projectionAngle;
 	cosAngle = reflectedAngleVector.X();
 	sinAngle = reflectedAngleVector.Y();
 	angle = atan2f(sinAngle, cosAngle);
@@ -256,12 +304,16 @@ void BENgineSpriteCollection::RotateAboutAbsolutePointRadians(const float x, con
 	const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
 	//Matrix temp = scale * rot * trans * rotationAndTranslationMatrix
 	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * rotationAndTranslationMatrix;
-	Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
+	const Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
 	posX = temp.M12();
 	posY = temp.M13();
 	angle += radians;
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
 	for (auto& spriteComponent : spriteComponentList)
 	{
 		spriteComponent->RotateByRadiansUsingMatrixAboutPoint(radians, rotationAndTranslationMatrix);
@@ -276,12 +328,16 @@ void BENgineSpriteCollection::RotateAboutAbsolutePointDegrees(const float x, con
 	const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
 	//Matrix temp = scale * rot * trans * rotationAndTranslationMatrix;
 	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * rotationAndTranslationMatrix;
-	Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
+	const Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
 	posX = temp.M12();
 	posY = temp.M13();
 	angle += radians;
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
 	for (auto& spriteComponent : spriteComponentList)
 	{
 		spriteComponent->RotateByRadiansUsingMatrixAboutPoint(radians, rotationAndTranslationMatrix);
@@ -298,14 +354,17 @@ void BENgineSpriteCollection::RotateAboutRelativePointRadians(float x, float y, 
 	const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
 	//Matrix temp = scale * rot * trans * rotationAndTranslationMatrix;
 	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * rotationAndTranslationMatrix;
-	Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
+	const Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
 	posX = temp.M12();
 	posY = temp.M13();
 	//trans.set(TRANS, posX, posY, 0.f);
 	angle += radians;
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
-	//rot.set(ROT_Z, angle);
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
 	for (auto& spriteComponent : spriteComponentList)
 	{
 		spriteComponent->RotateByRadiansUsingMatrixAboutPoint(radians, rotationAndTranslationMatrix);
@@ -321,12 +380,16 @@ void BENgineSpriteCollection::RotateAboutRelativePointDegrees(float x, float y, 
 	const Matrix rotationAndTranslationMatrix = (Matrix(TRANS, -x, -y, 0.f) * Matrix(ROT_Z, radians) * Matrix(TRANS, x, y, 0.f));
 	//Matrix temp = scale * rot * trans * rotationAndTranslationMatrix;
 	//Matrix temp = Matrix(SCALE, scaleX, scaleY, 1.f) * Matrix(Vect(cosAngle, sinAngle, 0.f, 0.f), Vect(-sinAngle, cosAngle, 0.f, 0.f), Vect(0.f, 0.f, 1.f, 0.f), Vect(0.f, 0.f, 0.f, 1.f)) * Matrix(TRANS, posX, posY, 0.f) * rotationAndTranslationMatrix;
-	Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
+	const Matrix temp = GetSRTMatrix() * rotationAndTranslationMatrix;
 	posX = temp.M12();
 	posY = temp.M13();
 	angle += radians;
-	cosAngle = cosf(angle);
-	sinAngle = sinf(angle);
+	const float cosRad = rotationAndTranslationMatrix.M0();
+	const float sinRad = rotationAndTranslationMatrix.M1();
+	const float prevCosAngle = cosAngle;
+
+	cosAngle = (cosAngle * cosRad) - (sinAngle * sinRad);
+	sinAngle = (sinAngle * cosRad) + (prevCosAngle * sinRad);
 	for (auto& spriteComponent : spriteComponentList)
 	{
 		spriteComponent->RotateByRadiansUsingMatrixAboutPoint(radians, rotationAndTranslationMatrix);
